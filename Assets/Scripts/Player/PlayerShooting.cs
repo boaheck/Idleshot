@@ -9,10 +9,13 @@ public class PlayerShooting : MonoBehaviour {
 	[SerializeField]bool auto = false;
 
 	float timer;
+	ScoreSystem scores;
+
 	public GameObject projectile;
 
 	void Start () {
 		timer = 0;
+		scores = GameObject.Find ("Scores").GetComponent<ScoreSystem> ();
 	}
 
 	void Update () {
@@ -43,5 +46,6 @@ public class PlayerShooting : MonoBehaviour {
 
 	void Fire(){
 		Instantiate (projectile, transform.position + (transform.rotation * shotOffset), transform.rotation);
+		scores.AddShells ();
 	}
 }
