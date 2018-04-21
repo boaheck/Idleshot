@@ -1,9 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-
-
 
 [System.Serializable]
 public struct ShopFunctionValue
@@ -21,7 +18,9 @@ public struct ShopItem
 {
     public string id;
     public string name;
-    public Image thumbnail;
+    public string description;
+    public Sprite thumbnail;
+    public int cost;
     public ItemType type;
     [SerializeField]
     public List<ShopFunctionValue> functionValues;

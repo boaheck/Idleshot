@@ -8,6 +8,11 @@ public class SetBottomToLowestChild : MonoBehaviour
     RectTransform rt;
     void Start()
     {
+        Set();
+    }
+
+    public void Set()
+    {
         rt = GetComponent<RectTransform>();
         RectTransform containerRt = transform.parent.GetComponentInParent<RectTransform>();
         float bottom = 0f;
@@ -24,7 +29,6 @@ public class SetBottomToLowestChild : MonoBehaviour
         bottom += containerRt.rect.height - childHeight;
 
         rt.offsetMin = new Vector2(rt.offsetMin.x, bottom);
-
     }
 
 }

@@ -10,9 +10,28 @@ public class Shop : MonoBehaviour
     float onScale = 1f;
     float moveStep = 0.03f;
     Coroutine showShop, hideShop;
+
+    public ShopItems items;
+    private string[] boughtItems;
+    public Transform shopItemUIContainer;
+    public GameObject shopItemUIPrefab;
     void Start()
     {
         canvasContainer = GetComponentInChildren<Canvas>().transform.parent;
+        int i = 0;
+        foreach (ShopItem item in items.shopItems)
+        {
+            GameObject shopItemUI = GameObject.Instantiate(shopItemUIPrefab, Vector3.zero, shopItemUIContainer.rotation, shopItemUIContainer);
+            Transform siTransform = shopItemUI.transform;
+            siTransform.Find("Image").GetComponent<Image>().sprite = item.thumbnail;
+            siTransform.Find("Name").GetComponent<Text>().text = item.name;
+            siTransform.Find("Description").GetComponent<Text>().text = item.description;
+            RectTransform rtc = shopItemUI.GetComponent<RectTransform>();
+            float initialPos = shopItemUIContainer.GetComponent<RectTransform>().rect.yMax - rtc.rect.yMax;
+            rtc.localPosition = new Vector3(0, initialPos + (-i * 120), 0);
+            i++;
+        }
+        GetComponentInChildren<SetBottomToLowestChild>().Set();
     }
 
     void Update()
