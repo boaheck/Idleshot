@@ -5,18 +5,33 @@ using UnityEngine;
 public class PlayerRotation : MonoBehaviour
 {
 
-    void Start()
-    {
+	bool mousemode = false;
 
-    }
+	void Update(){
+		if (mousemode) {
+			if (Mathf.Abs (Input.GetAxis ("AimX")) > 0.1 || Mathf.Abs (Input.GetAxis ("AimY")) > 0.1) {
+				mousemode = false;
+			}
+		} else {
+			if (Mathf.Abs (Input.GetAxis ("Mouse X")) > 0.1 || Mathf.Abs (Input.GetAxis ("Mouse Y")) > 0.1) {
+				mousemode = true;
+			}
+		}
+	}
 
-    void FixedUpdate()
-    {
-        float distance = Vector3.Magnitude(transform.position - Camera.main.transform.position);
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance));
-        Vector3 target = new Vector3(mousePos.x, transform.position.y, mousePos.z);
-        Debug.DrawLine(transform.position, target, Color.black, 0.1f);
+    void FixedUpdate(){
+		if (mousemode) {
+			float distance = Vector3.Magnitude (transform.position - Camera.main.transform.position);
+			Debug.Log (distance);
+			Vector3 mousePos = Camera.main.ScreenToWorldPoint (new Vector3 (Input.mousePosition.x, Input.mousePosition.y, distance));
+			Vector3 target = new Vector3 (mousePos.x, transform.position.y, mousePos.z);
 
-        transform.LookAt(new Vector3(mousePos.x, transform.position.y, mousePos.z));
+			transform.LookAt (new Vector3 (mousePos.x, transform.position.y, mousePos.z));
+		} else {
+			Vector3 lookdir = new Vector3 (Input.GetAxis ("AimX"), 0, Input.GetAxis ("AimY"));
+			if (lookdir.magnitude > 0.2) {
+				transform.forward = lookdir.normalized;
+			}
+		}
     }
 }
