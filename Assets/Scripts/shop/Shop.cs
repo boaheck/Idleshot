@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class Shop : MonoBehaviour {
+public class Shop : MonoBehaviour
+{
 
     Transform canvasContainer;
     float offScale = 0.2f;
@@ -11,19 +12,25 @@ public class Shop : MonoBehaviour {
     Coroutine showShop, hideShop;
 
     public ShopItems items;
+
+    public AudioClip startupClip, selectClip;
     private List<string> boughtItems = new List<string>();
     public Transform shopItemUIContainer;
     public GameObject shopItemUIPrefab;
-    private Dictionary<string,GameObject> shopItemUIDict = new Dictionary<string,GameObject>();
-
-    void Start() {
+    private Dictionary<string, GameObject> shopItemUIDict = new Dictionary<string, GameObject>();
+    private AudioSource audioSource;
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
         canvasContainer = GetComponentInChildren<Canvas>().transform.parent;
         int i = 0;
-        foreach (ShopItem item in items.shopItems) {
+        foreach (ShopItem item in items.shopItems)
+        {
             GameObject shopItemUI = GameObject.Instantiate(shopItemUIPrefab, Vector3.zero, shopItemUIContainer.rotation, shopItemUIContainer);
             shopItemUI.name = item.id;
             Button button = shopItemUI.GetComponent<Button>();
-            button.onClick.AddListener(() => {
+            button.onClick.AddListener(() =>
+            {
                 BuyUpgrade(item);
             });
 
@@ -45,56 +52,74 @@ public class Shop : MonoBehaviour {
         GetComponentInChildren<SetBottomToLowestChild>().Set();
     }
 
-    void BuyUpgrade(ShopItem item) {
+    void BuyUpgrade(ShopItem item)
+    {
         ItemType type = item.type;
         List<ShopFunctionValue> functionValues = item.functionValues;
         Debug.Log(type);
-        switch(type){
-            case ItemType.BuyTurret:{
-				GameObject.Instantiate(items.turretPrefab, transform.position + (Vector3.down * transform.position.y), transform.rotation, transform);
-                break;
-            }
-            default: {
-                break;
-            }
+        switch (type)
+        {
+            case ItemType.BuyTurret:
+                {
+                    GameObject.Instantiate(items.turretPrefab, transform.position + (Vector3.down * transform.position.y), transform.rotation, transform);
+                    break;
+                }
+            default:
+                {
+                    break;
+                }
         }
         boughtItems.Add(item.id);
         GameObject UIItem = shopItemUIDict[item.id];
         GameObject.DestroyImmediate(UIItem);
+        audioSource.PlayOneShot(selectClip);
     }
 
-    void OnTriggerEnter(Collider collider) {
-        if (collider.CompareTag("Player")) {
-            if (showShop != null) {
+    void OnTriggerEnter(Collider collider)
+    {
+        if (collider.CompareTag("Player"))
+        {
+            audioSource.PlayOneShot(startupClip);
+            if (showShop != null)
+            {
                 StopCoroutine(showShop);
             }
-            if (hideShop != null) {
+            if (hideShop != null)
+            {
                 StopCoroutine(hideShop);
             }
             showShop = StartCoroutine(ShowShop());
         }
     }
 
-    void OnTriggerExit(Collider collider) {
-        if (collider.CompareTag("Player")) {
-            if (hideShop != null) {
+    void OnTriggerExit(Collider collider)
+    {
+        if (collider.CompareTag("Player"))
+        {
+            if (hideShop != null)
+            {
                 StopCoroutine(hideShop);
             }
-            if (showShop != null) {
+            if (showShop != null)
+            {
                 StopCoroutine(showShop);
             }
             hideShop = StartCoroutine(HideShop());
         }
     }
 
-    IEnumerator ShowShop() {
-        while (canvasContainer.localScale.x < onScale) {
+    IEnumerator ShowShop()
+    {
+        while (canvasContainer.localScale.x < onScale)
+        {
             canvasContainer.localScale = canvasContainer.localScale + (Vector3.one * moveStep);
             yield return new WaitForFixedUpdate();
         }
     }
-    IEnumerator HideShop() {
-        while (canvasContainer.localScale.x > offScale) {
+    IEnumerator HideShop()
+    {
+        while (canvasContainer.localScale.x > offScale)
+        {
             canvasContainer.localScale = canvasContainer.localScale - (Vector3.one * moveStep);
             yield return new WaitForFixedUpdate();
         }
