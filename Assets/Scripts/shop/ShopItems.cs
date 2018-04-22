@@ -9,7 +9,8 @@ public struct ShopFunctionValue {
 public enum ItemType {
     ChangePlayerSpeed,
     ChangeEnemyFrequency,
-    ChangePlayerBulletFrequency
+    ChangePlayerBulletFrequency,
+    BuyTurret
 }
 [System.Serializable]
 public struct ShopItem {
@@ -25,5 +26,7 @@ public struct ShopItem {
 
 [CreateAssetMenu(fileName = "ShopItems", menuName = "Shop/Items", order = 1)]
 public class ShopItems : ScriptableObject {
+    public GameObject turretPrefab;
     public List<ShopItem> shopItems;
+
 }

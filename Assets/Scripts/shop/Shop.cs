@@ -11,18 +11,20 @@ public class Shop : MonoBehaviour {
     Coroutine showShop, hideShop;
 
     public ShopItems items;
-    private string[] boughtItems;
+    private List<string> boughtItems = new List<string>();
     public Transform shopItemUIContainer;
     public GameObject shopItemUIPrefab;
+    private Dictionary<string,GameObject> shopItemUIDict = new Dictionary<string,GameObject>();
+
     void Start() {
         canvasContainer = GetComponentInChildren<Canvas>().transform.parent;
         int i = 0;
         foreach (ShopItem item in items.shopItems) {
             GameObject shopItemUI = GameObject.Instantiate(shopItemUIPrefab, Vector3.zero, shopItemUIContainer.rotation, shopItemUIContainer);
-
+            shopItemUI.name = item.id;
             Button button = shopItemUI.GetComponent<Button>();
             button.onClick.AddListener(() => {
-                BuyUpgrade(item.type, item.functionValues);
+                BuyUpgrade(item);
             });
 
             EnableButtonOnScore ebos = shopItemUI.AddComponent<EnableButtonOnScore>();
@@ -37,13 +39,28 @@ public class Shop : MonoBehaviour {
             float initialPos = shopItemUIContainer.GetComponent<RectTransform>().rect.yMax - rtc.rect.yMax;
             rtc.localPosition = new Vector3(0, initialPos + (-i * 120), 0);
 
+            shopItemUIDict.Add(item.id, shopItemUI);
             i++;
         }
         GetComponentInChildren<SetBottomToLowestChild>().Set();
     }
 
-    void BuyUpgrade(ItemType type, List<ShopFunctionValue> functionValues) {
+    void BuyUpgrade(ShopItem item) {
+        ItemType type = item.type;
+        List<ShopFunctionValue> functionValues = item.functionValues;
         Debug.Log(type);
+        switch(type){
+            case ItemType.BuyTurret:{
+                GameObject.Instantiate(items.turretPrefab, transform.position, transform.rotation, transform);
+                break;
+            }
+            default: {
+                break;
+            }
+        }
+        boughtItems.Add(item.id);
+        GameObject UIItem = shopItemUIDict[item.id];
+        GameObject.DestroyImmediate(UIItem);
     }
 
     void OnTriggerEnter(Collider collider) {
