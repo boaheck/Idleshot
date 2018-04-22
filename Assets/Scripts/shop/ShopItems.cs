@@ -3,19 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public struct ShopFunctionValue
-{
+public struct ShopFunctionValue {
     public string key, value;
 }
-public enum ItemType
-{
+public enum ItemType {
     ChangePlayerSpeed,
     ChangeEnemyFrequency,
     ChangePlayerBulletFrequency
 }
 [System.Serializable]
-public struct ShopItem
-{
+public struct ShopItem {
     public string id;
     public string name;
     public string description;
@@ -27,7 +24,6 @@ public struct ShopItem
 }
 
 [CreateAssetMenu(fileName = "ShopItems", menuName = "Shop/Items", order = 1)]
-public class ShopItems : ScriptableObject
-{
+public class ShopItems : ScriptableObject {
     public List<ShopItem> shopItems;
 }

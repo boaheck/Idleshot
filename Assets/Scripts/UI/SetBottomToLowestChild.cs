@@ -3,25 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SetBottomToLowestChild : MonoBehaviour
-{
+public class SetBottomToLowestChild : MonoBehaviour {
     RectTransform rt;
-    void Start()
-    {
+    void Start() {
         Set();
     }
 
-    public void Set()
-    {
+    public void Set() {
         rt = GetComponent<RectTransform>();
         RectTransform containerRt = transform.parent.GetComponentInParent<RectTransform>();
         float bottom = 0f;
         float childHeight = 0f;
         RectTransform[] children = GetComponentsInChildren<RectTransform>();
-        foreach (RectTransform crt in children)
-        {
-            if (crt.offsetMax.y < bottom)
-            {
+        foreach (RectTransform crt in children) {
+            if (crt.offsetMax.y < bottom) {
                 bottom = crt.offsetMax.y;
                 childHeight = crt.rect.height;
             }

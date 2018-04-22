@@ -16,7 +16,7 @@ MonoBehaviour:
     name: This is the real Name
     description: This is a description!
     thumbnail: {fileID: 21300000, guid: 5485e2f56028a3c4cb54f5caa167377e, type: 3}
-    cost: 0
+    cost: 32
     type: 2
     functionValues:
     - key: frequency
@@ -25,14 +25,14 @@ MonoBehaviour:
     name: Increase Player Bullet Speed
     description: This does the thing the title says
     thumbnail: {fileID: 21300000, guid: 0626b924325d1c34cafa6b22297f4e4f, type: 3}
-    cost: 0
+    cost: 100
     type: 0
     functionValues: []
   - id: asdsad
     name: ssdfdsf
     description: 23f9032uf 0283jf023 03 9ru23 0f932f 3r 023r
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
-    cost: 0
+    cost: -10
     type: 0
     functionValues: []
   - id: asdsad

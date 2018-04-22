@@ -22,7 +22,6 @@ public class PlayerRotation : MonoBehaviour {
         if (mousemode) {
             float distance = Vector3.Magnitude(transform.position - Camera.main.transform.position);
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance));
-            Vector3 target = new Vector3(mousePos.x, transform.position.y, mousePos.z);
 
             transform.LookAt(new Vector3(mousePos.x, transform.position.y, mousePos.z));
         } else {
