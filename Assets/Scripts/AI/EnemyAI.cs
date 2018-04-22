@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class EnemyAI : MonoBehaviour {
     NavMeshAgent nma;
 
-    bool hasTarget = true;
+	[HideInInspector]public bool hasTarget = true;
     bool active = false;
     bool searching = false;
     Vector3 targetPos;
@@ -41,6 +41,7 @@ public class EnemyAI : MonoBehaviour {
                     if (raycastHit.collider == col) {
                         SetTarget(col.transform.position, 3);
                         playerFound = true;
+						hasTarget = true;
                     }
                 }
             }
