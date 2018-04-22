@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 23850000641920406}
   - component: {fileID: 114625631065488586}
   - component: {fileID: 136573057186908788}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Shop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,8 +259,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1841178724157992}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 37.850075, y: 1.5765927, z: 4.064058}
-  m_LocalScale: {x: 1.5765932, y: 1.5765927, z: 1.5765927}
+  m_LocalPosition: {x: 37.850075, y: 1, z: 4.064058}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4795174131340692}
   m_Father: {fileID: 0}
@@ -534,7 +534,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 224400483898892504}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.99999994
+  m_Size: 0.99999976
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -958,7 +958,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00015258789, y: -0.000015258789}
+  m_AnchoredPosition: {x: -0.00015258789, y: 0.000045776367}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224400483898892504
