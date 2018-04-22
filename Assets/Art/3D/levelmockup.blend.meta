@@ -18,6 +18,7 @@ ModelImporter:
     2100000: redrock
     2100002: unnamed
     2100004: sand
+    2100006: redrock__ggradients_png
     2300000: Cube
     2300002: Cube_001
     2300004: Cube_002
@@ -37,7 +38,7 @@ ModelImporter:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
