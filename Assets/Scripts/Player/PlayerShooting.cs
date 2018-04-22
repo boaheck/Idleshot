@@ -6,10 +6,14 @@ using UnityEngine.EventSystems;
 public class PlayerShooting : MonoBehaviour {
 
 	[SerializeField]Vector3 shotOffset = Vector3.zero;
-	[SerializeField]float rate = 0.2f;
+	[SerializeField]float rate = 5;
+	[SerializeField]float spread = 5.0f;
 	[SerializeField]bool auto = false;
 
+	float overflow = 0.0f;
+	float interval;
 	float timer;
+	bool fired = false;
 	ScoreSystem scores;
 
 	public GameObject projectile;
@@ -17,40 +21,56 @@ public class PlayerShooting : MonoBehaviour {
 	void Start () {
 		timer = 0;
 		scores = GameObject.Find ("Scores").GetComponent<ScoreSystem> ();
+		interval = 1.0f / rate;
 	}
 
-    void Update() {
+	void Update() {
+		fired = Input.GetButtonDown ("Fire1");
+	}
+
+    void FixedUpdate() {
         bool onUI = EventSystem.current.IsPointerOverGameObject();
         if (!onUI) {
 
             if (auto) {
-                if (Input.GetButtonDown("Fire1")) {
+				if (fired) {
                     Fire();
-                    timer = rate;
+					timer = interval;
                 } else if (Input.GetButton("Fire1")) {
                     if (timer <= 0) {
-                        Fire();
-                        timer = rate;
+						if (interval < Time.fixedDeltaTime) {
+							float bulletTot = Time.fixedDeltaTime/interval;
+							bulletTot += overflow;
+							int bulletAmt = Mathf.FloorToInt (bulletTot);
+							overflow = bulletTot - bulletAmt;
+							for (int i = 0; i < bulletAmt; i++) {
+								Fire ();
+							}
+						} else {
+							Fire ();
+						}
+						timer = interval;
                     } else {
-                        timer -= Time.deltaTime;
+						timer -= Time.fixedDeltaTime;
                     }
                 }
             } else {
                 if (timer <= 0) {
-                    if (Input.GetButtonDown("Fire1")) {
+                    if (fired) {
                         Fire();
-                        timer = rate;
+                        timer = interval;
                     }
                 } else {
-                    timer -= Time.deltaTime;
+					timer -= Time.fixedDeltaTime;
                 }
             }
         }
-
+		fired = false;
     }
 
 	void Fire(){
-		Instantiate (projectile, transform.position + (transform.rotation * shotOffset), transform.rotation);
+		Quaternion randRot = Quaternion.Euler(Vector3.up * Random.Range(-spread,spread));
+		Instantiate (projectile, transform.position + (transform.rotation * shotOffset), transform.rotation * randRot);
 		scores.AddShells ();
 	}
 }
