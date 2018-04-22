@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerRotation : MonoBehaviour {
 
     bool mousemode = false;
+	Vector3 lookPos = Vector3.zero;
+	public LayerMask aimableLayers;
 
     void Update() {
         if (mousemode) {
@@ -20,10 +22,13 @@ public class PlayerRotation : MonoBehaviour {
 
     void FixedUpdate() {
         if (mousemode) {
-            float distance = Vector3.Magnitude(transform.position - Camera.main.transform.position);
-            Vector3 mousePos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance));
+			RaycastHit hit;
+			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            transform.LookAt(new Vector3(mousePos.x, transform.position.y, mousePos.z));
+			if (Physics.Raycast(ray, out hit,1000f ,aimableLayers.value)) {
+				lookPos = new Vector3 (hit.point.x, transform.position.y, hit.point.z);
+			}
+			transform.LookAt(lookPos);
         } else {
             Vector3 lookdir = new Vector3(Input.GetAxis("AimX"), 0, Input.GetAxis("AimY"));
             if (lookdir.magnitude > 0.2) {
