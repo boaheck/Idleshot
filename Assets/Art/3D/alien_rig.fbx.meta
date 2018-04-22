@@ -1,0 +1,160 @@
+fileFormatVersion: 2
+guid: 4adec6410004f54469b6263b35ce6be0
+timeCreated: 1524385678
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: body
+    100004: face
+    100006: head
+    100008: j_arm_l_end
+    100010: j_arm_r_end
+    100012: j_bend_BIND
+    100014: j_bottom_BIND
+    100016: j_elbow_l_BIND
+    100018: j_elbow_r_BIND
+    100020: j_foot_l_BIND
+    100022: j_foot_r_BIND
+    100024: j_head_BIND
+    100026: j_head_end
+    100028: j_knee_l_BIND
+    100030: j_knee_r_BIND
+    100032: j_leg_l_BIND
+    100034: j_MAIN_alien
+    100036: j_neck_BIND
+    100038: j_reg_r_BIND
+    100040: j_shoulder_l_BIND
+    100042: j_shoulder_r_BIND
+    100044: j_toe_end
+    100046: j_toe_end 1
+    100048: j_upper_BIND
+    100050: j_wrist_l_BIND
+    100052: j_wrist_r_BIND
+    400000: //RootNode
+    400002: body
+    400004: face
+    400006: head
+    400008: j_arm_l_end
+    400010: j_arm_r_end
+    400012: j_bend_BIND
+    400014: j_bottom_BIND
+    400016: j_elbow_l_BIND
+    400018: j_elbow_r_BIND
+    400020: j_foot_l_BIND
+    400022: j_foot_r_BIND
+    400024: j_head_BIND
+    400026: j_head_end
+    400028: j_knee_l_BIND
+    400030: j_knee_r_BIND
+    400032: j_leg_l_BIND
+    400034: j_MAIN_alien
+    400036: j_neck_BIND
+    400038: j_reg_r_BIND
+    400040: j_shoulder_l_BIND
+    400042: j_shoulder_r_BIND
+    400044: j_toe_end
+    400046: j_toe_end 1
+    400048: j_upper_BIND
+    400050: j_wrist_l_BIND
+    400052: j_wrist_r_BIND
+    2100000: texture
+    2100002: details_texture
+    4300000: body
+    4300002: face
+    4300004: head
+    9500000: //RootNode
+    13700000: body
+    13700002: face
+    13700004: head
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: details_texture
+    second: {fileID: 2100000, guid: 1d7cbc785a80d464e851f21667be4eb8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: texture
+    second: {fileID: 2100000, guid: dba0ff16f27c6cd49b3bf88db5c1414f, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 10
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
