@@ -11,6 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8796f3b8ff583446598453561b5124bc, type: 3}
   m_Name: ShopItems
   m_EditorClassIdentifier: 
+  turretPrefab: {fileID: 0}
   shopItems:
   - id: BulletSpeed1
     name: This is the real Name
@@ -35,49 +36,49 @@ MonoBehaviour:
     cost: -10
     type: 0
     functionValues: []
-  - id: asdsad
+  - id: 2
     name: ssdfdsf
     description: 23f9032uf 0283jf023 03 9ru23 0f932f 3r 023r
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
     cost: 0
     type: 0
     functionValues: []
-  - id: asdsad
+  - id: 4
     name: ssdfdsf
     description: 23f9032uf 0283jf023 03 9ru23 0f932f 3r 023r
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
     cost: 0
     type: 0
     functionValues: []
-  - id: asdsad
+  - id: 78
     name: ssdfdsf
     description: 23f9032uf 0283jf023 03 9ru23 0f932f 3r 023r
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
     cost: 0
     type: 0
     functionValues: []
-  - id: asdsad
+  - id: 5
     name: ssdfdsf
     description: 23f9032uf 0283jf023 03 9ru23 0f932f 3r 023r
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
     cost: 0
     type: 0
     functionValues: []
-  - id: asdsad
+  - id: 6
     name: ssdfdsf
     description: 23f9032uf 0283jf023 03 9ru23 0f932f 3r 023r
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
     cost: 0
     type: 0
     functionValues: []
-  - id: asdsad
+  - id: 7
     name: ssdfdsf
     description: 23f9032uf 0283jf023 03 9ru23 0f932f 3r 023r
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
     cost: 0
     type: 0
     functionValues: []
-  - id: asdsad
+  - id: 345
     name: ssdfdsf
     description: 23f9032uf 0283jf023 03 9ru23 0f932f 3r 023r
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
