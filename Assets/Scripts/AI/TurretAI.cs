@@ -4,13 +4,44 @@ using UnityEngine;
 
 public class TurretAI : MonoBehaviour {
 
-	// Use this for initialization
+    Transform target;
+	private float sightDistance = 17f;
+
 	void Start () {
 		Debug.Log("I am a turret!");
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
+	void FixedUpdate () {
+		if(target == null){
+			FindTarget();
+		}
+		else{
+			ShootTarget();
+		}
+	}
+
+	void FindTarget() {
+		transform.Rotate(new Vector3(0,1f,0));
+		Ray ray = new Ray(transform.position,transform.forward);
+		Debug.DrawRay(ray.origin,ray.direction*sightDistance,Color.green);
+		RaycastHit raycastHit;
+		if(Physics.Raycast(ray.origin,ray.direction,out raycastHit,sightDistance)){
+			if(raycastHit.collider.gameObject.GetComponentInParent<EnemyAI>() != null){
+                Debug.Log("Got thing!");
+				target=  raycastHit.collider.transform.parent;
+			}
+		}
+	}
+
+	void ShootTarget() {
+		float distance = Vector3.Distance(transform.position,target.position);
+		if(distance > sightDistance){
+			//Lost Sight
+			target=  null;
+			return;
+		}
+		transform.LookAt(target,Vector3.up);
+		transform.rotation = Quaternion.Euler(new Vector3(0,transform.rotation.eulerAngles.y,0));
+
 	}
 }

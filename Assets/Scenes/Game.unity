@@ -2317,7 +2317,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4933218993946464, guid: b61ffd457b4485141b9ece67d79e8782, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 28.57
+      value: 24.98
       objectReference: {fileID: 0}
     - target: {fileID: 4933218993946464, guid: b61ffd457b4485141b9ece67d79e8782, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2325,7 +2325,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4933218993946464, guid: b61ffd457b4485141b9ece67d79e8782, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 7.73
+      value: 10.33
       objectReference: {fileID: 0}
     - target: {fileID: 4933218993946464, guid: b61ffd457b4485141b9ece67d79e8782, type: 2}
       propertyPath: m_LocalRotation.x
@@ -2375,6 +2375,11 @@ Prefab:
     - target: {fileID: 1146970524484838, guid: b61ffd457b4485141b9ece67d79e8782, type: 2}
       propertyPath: m_Name
       value: TurretShop
+      objectReference: {fileID: 0}
+    - target: {fileID: 224741950068384068, guid: b61ffd457b4485141b9ece67d79e8782,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b61ffd457b4485141b9ece67d79e8782, type: 2}
