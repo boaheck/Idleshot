@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4933218993946464}
   - component: {fileID: 114584174801471640}
   - component: {fileID: 136456657672678494}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TurretShop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -301,8 +301,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1146970524484838}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 28.57, y: 1.5765927, z: 7.73}
-  m_LocalScale: {x: 1.5765932, y: 1.5765927, z: 1.5765927}
+  m_LocalPosition: {x: 24.98, y: 1, z: 10.33}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4554497263843176}
   - {fileID: 4245591639746094}
@@ -474,7 +474,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 224741950068384068}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.9999999
+  m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -805,7 +805,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1749838321698304}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
@@ -1084,7 +1084,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00015258789, y: -0.000015258789}
+  m_AnchoredPosition: {x: -0.00015258789, y: -0.000045776367}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224741950068384068

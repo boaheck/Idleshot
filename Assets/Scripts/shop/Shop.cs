@@ -51,7 +51,7 @@ public class Shop : MonoBehaviour {
         Debug.Log(type);
         switch(type){
             case ItemType.BuyTurret:{
-                GameObject.Instantiate(items.turretPrefab, transform.position, transform.rotation, transform);
+				GameObject.Instantiate(items.turretPrefab, transform.position + (Vector3.down * transform.position.y), transform.rotation, transform);
                 break;
             }
             default: {
