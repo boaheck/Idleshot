@@ -280,32 +280,36 @@ public class Shop : MonoBehaviour {
                         string p = parameters["value"];
                         float val = float.Parse(p);
                     }
+                    
                     break;
                 }
             case ItemType.ChangeTurretHealth: {
-                    Debug.Log("Not Implemented");
-                    TurretAI tai = GetComponentInChildren<TurretAI>();
+                    TurretHealth th = GetComponentInChildren<TurretHealth>();
                     if (parameters.ContainsKey("percent")) {
                         string p = parameters["percent"];
                         float val = float.Parse(p);
+                        th.AddMaxHealthPerc(val);
                     }
                     if (parameters.ContainsKey("value")) {
                         string p = parameters["value"];
                         float val = float.Parse(p);
+                        th.AddMaxHealth(val);
                     }
                     break;
                 }
             case ItemType.RefillTurretHealth: {
-                    Debug.Log("Not Implemented");
-                    TurretAI tai = GetComponentInChildren<TurretAI>();
+                    TurretHealth th = GetComponentInChildren<TurretHealth>();
                     if (parameters.ContainsKey("percent")) {
                         string p = parameters["percent"];
                         float val = float.Parse(p);
+                        th.Heal(th.GetHealth()*val);
+                        
                     } else if (parameters.ContainsKey("value")) {
                         string p = parameters["value"];
                         float val = float.Parse(p);
+                        th.Heal(val);
                     } else {
-
+                        th.FullHeal();
                     }
                     break;
                 }
