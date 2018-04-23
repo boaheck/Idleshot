@@ -1823,6 +1823,8 @@ MonoBehaviour:
   enemyPrefab: {fileID: 1536946019482522, guid: 8566e83162eeb4549aa28b603067bdfb,
     type: 2}
   nextWaveText: {fileID: 1548093285}
+  calmSong: 0
+  battleSongs: 
 --- !u!4 &1486475127
 Transform:
   m_ObjectHideFlags: 0
@@ -2280,7 +2282,7 @@ Prefab:
     - target: {fileID: 224367381357395800, guid: 493091bf639a748dfaa95bcb008f7a9f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -0.0000144438045
+      value: -0.0000024429821
       objectReference: {fileID: 0}
     - target: {fileID: 224367381357395800, guid: 493091bf639a748dfaa95bcb008f7a9f,
         type: 2}
