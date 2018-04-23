@@ -8,17 +8,30 @@ public struct ShopFunctionValue {
 }
 public enum ItemType {
     ChangePlayerSpeed,
-    ChangeEnemyFrequency,
     ChangePlayerBulletFrequency,
-    BuyTurret
+    ChangePlayerBulletSpread,
+    ChangePlayerBulletDamage,
+    ChangePlayerHealth,
+    RefillPlayerHealth,
+
+    BuyTurret,
+    ChangeTurretSearchSpeed,
+    ChangeTurretBulletFrequency,
+    ChangeTurretBulletSpread,
+    ChangeTurretBulletDamage,
+    ChangeTurretHealth,
+    RefillTurretHealth,
+    
 }
 [System.Serializable]
 public struct ShopItem {
     public string id;
     public string name;
     public string description;
+    public string depends;
     public Sprite thumbnail;
-    public int cost;
+    public int shellCost;
+    public int jellyCost;
     public ItemType type;
     [SerializeField]
     public List<ShopFunctionValue> functionValues;

@@ -5,12 +5,16 @@ using UnityEngine.UI;
 
 public class EnableButtonOnScore : MonoBehaviour {
 
-    public int requiredScore;
+    public int requiredShells;
+    public int requiredJelly;
+    public string depends;
     Button button;
     ScoreSystem scoreSystem;
+    Shop shop;
 
     void Start() {
         button = GetComponent<Button>();
+        shop = GetComponentInParent<Shop>();
         scoreSystem = GameObject.FindObjectOfType<ScoreSystem>();
         CheckButtonValid();
     }
@@ -21,6 +25,9 @@ public class EnableButtonOnScore : MonoBehaviour {
 
     public void CheckButtonValid() {
         int currentScore = scoreSystem.GetShells();
-        button.interactable = requiredScore <= currentScore;
+        int currentJelly = scoreSystem.GetShells();
+        Debug.Log("Change me");
+        bool hasDependency = shop.BoughtItem(depends);
+        button.interactable = requiredShells <= currentScore && requiredJelly < currentJelly && hasDependency;
     }
 }

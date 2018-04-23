@@ -10,6 +10,8 @@ public class Shop : MonoBehaviour
     float onScale = 1f;
     float moveStep = 0.03f;
     Coroutine showShop, hideShop;
+    bool inShopRadius = false;
+    bool shopOpen = false;
 
     public ShopItems items;
 
@@ -19,10 +21,13 @@ public class Shop : MonoBehaviour
     public GameObject shopItemUIPrefab;
     private Dictionary<string, GameObject> shopItemUIDict = new Dictionary<string, GameObject>();
     private AudioSource audioSource;
+    ScoreSystem scoreSystem;
+
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
         canvasContainer = GetComponentInChildren<Canvas>().transform.parent;
+        scoreSystem = GameObject.FindObjectOfType<ScoreSystem>();
         int i = 0;
         foreach (ShopItem item in items.shopItems)
         {
@@ -35,7 +40,9 @@ public class Shop : MonoBehaviour
             });
 
             EnableButtonOnScore ebos = shopItemUI.AddComponent<EnableButtonOnScore>();
-            ebos.requiredScore = item.cost;
+            ebos.requiredShells = item.shellCost;
+            ebos.requiredJelly = item.jellyCost;
+            ebos.depends = item.depends;
 
             Transform siTransform = shopItemUI.transform;
             siTransform.Find("Image").GetComponent<Image>().sprite = item.thumbnail;
@@ -52,11 +59,86 @@ public class Shop : MonoBehaviour
         GetComponentInChildren<SetBottomToLowestChild>().Set();
     }
 
+    public bool BoughtItem(string id){
+        if(string.IsNullOrEmpty(id)){
+            return true;
+        }
+        else {
+            return boughtItems.Contains(id);
+        }
+    }
+
+    void FixedUpdate() {
+        if(inShopRadius && Input.GetButtonDown("Submit")){
+            if (shopOpen) {
+                StopShowShop();
+            } else {
+                StartShowShop();
+            }
+        }
+    }
+
+    void OnTriggerEnter(Collider collider)
+    {
+        if (collider.CompareTag("Player"))
+        {
+            inShopRadius = true;
+        }
+    }
+
+    void OnTriggerExit(Collider collider)
+    {
+        if (collider.CompareTag("Player"))
+        {
+            inShopRadius = false;
+            StopShowShop();
+        }
+    }
+
+    void StartShowShop(){
+        audioSource.PlayOneShot(startupClip);
+        if (showShop != null) {
+            StopCoroutine(showShop);
+        }
+        if (hideShop != null) {
+            StopCoroutine(hideShop);
+        }
+        showShop = StartCoroutine(ShowShop());
+    }
+
+    void StopShowShop() {
+        if (hideShop != null) {
+            StopCoroutine(hideShop);
+        }
+        if (showShop != null) {
+            StopCoroutine(showShop);
+        }
+        hideShop = StartCoroutine(HideShop());
+    }
+
+    IEnumerator ShowShop()
+    {
+        shopOpen = true;
+        while (canvasContainer.localScale.x < onScale)
+        {
+            canvasContainer.localScale = canvasContainer.localScale + (Vector3.one * moveStep);
+            yield return new WaitForFixedUpdate();
+        }
+    }
+    IEnumerator HideShop()
+    {
+        shopOpen = false;
+        while (canvasContainer.localScale.x > offScale)
+        {
+            canvasContainer.localScale = canvasContainer.localScale - (Vector3.one * moveStep);
+            yield return new WaitForFixedUpdate();
+        }
+    }
+
     void BuyUpgrade(ShopItem item)
     {
         ItemType type = item.type;
         List<ShopFunctionValue> functionValues = item.functionValues;
-        Debug.Log(type);
         switch (type)
         {
             case ItemType.BuyTurret:
@@ -73,55 +155,10 @@ public class Shop : MonoBehaviour
         GameObject UIItem = shopItemUIDict[item.id];
         GameObject.DestroyImmediate(UIItem);
         audioSource.PlayOneShot(selectClip);
+        scoreSystem.AddShells(-item.shellCost);
+        Debug.Log("Change Me");
+        scoreSystem.AddShells(-item.jellyCost);
+        
     }
 
-    void OnTriggerEnter(Collider collider)
-    {
-        if (collider.CompareTag("Player"))
-        {
-            audioSource.PlayOneShot(startupClip);
-            if (showShop != null)
-            {
-                StopCoroutine(showShop);
-            }
-            if (hideShop != null)
-            {
-                StopCoroutine(hideShop);
-            }
-            showShop = StartCoroutine(ShowShop());
-        }
-    }
-
-    void OnTriggerExit(Collider collider)
-    {
-        if (collider.CompareTag("Player"))
-        {
-            if (hideShop != null)
-            {
-                StopCoroutine(hideShop);
-            }
-            if (showShop != null)
-            {
-                StopCoroutine(showShop);
-            }
-            hideShop = StartCoroutine(HideShop());
-        }
-    }
-
-    IEnumerator ShowShop()
-    {
-        while (canvasContainer.localScale.x < onScale)
-        {
-            canvasContainer.localScale = canvasContainer.localScale + (Vector3.one * moveStep);
-            yield return new WaitForFixedUpdate();
-        }
-    }
-    IEnumerator HideShop()
-    {
-        while (canvasContainer.localScale.x > offScale)
-        {
-            canvasContainer.localScale = canvasContainer.localScale - (Vector3.one * moveStep);
-            yield return new WaitForFixedUpdate();
-        }
-    }
 }
