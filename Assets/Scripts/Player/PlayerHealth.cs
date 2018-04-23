@@ -61,4 +61,13 @@ public class PlayerHealth : MonoBehaviour {
 		UpdateHealthUI ();
 	}
 
+	public void AddMaxHealthPerc(float amount){
+		maxHealth *= amount;
+		Heal(maxHealth);
+		UpdateHealthUI();
+	}
+
+	public float GetHealth(){
+		return health;
+	}
 }

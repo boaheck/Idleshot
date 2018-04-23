@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class Shop : MonoBehaviour
-{
+public class Shop : MonoBehaviour {
 
     Transform canvasContainer;
     float offScale = 0.2f;
@@ -23,19 +22,16 @@ public class Shop : MonoBehaviour
     private AudioSource audioSource;
     ScoreSystem scoreSystem;
 
-    void Start()
-    {
+    void Start() {
         audioSource = GetComponent<AudioSource>();
         canvasContainer = GetComponentInChildren<Canvas>().transform.parent;
         scoreSystem = GameObject.FindObjectOfType<ScoreSystem>();
         int i = 0;
-        foreach (ShopItem item in items.shopItems)
-        {
+        foreach (ShopItem item in items.shopItems) {
             GameObject shopItemUI = GameObject.Instantiate(shopItemUIPrefab, Vector3.zero, shopItemUIContainer.rotation, shopItemUIContainer);
             shopItemUI.name = item.id;
             Button button = shopItemUI.GetComponent<Button>();
-            button.onClick.AddListener(() =>
-            {
+            button.onClick.AddListener(() => {
                 BuyUpgrade(item);
             });
 
@@ -59,17 +55,16 @@ public class Shop : MonoBehaviour
         GetComponentInChildren<SetBottomToLowestChild>().Set();
     }
 
-    public bool BoughtItem(string id){
-        if(string.IsNullOrEmpty(id)){
+    public bool BoughtItem(string id) {
+        if (string.IsNullOrEmpty(id)) {
             return true;
-        }
-        else {
+        } else {
             return boughtItems.Contains(id);
         }
     }
 
     void FixedUpdate() {
-        if(inShopRadius && Input.GetButtonDown("Submit")){
+        if (inShopRadius && Input.GetButtonDown("Submit")) {
             if (shopOpen) {
                 StopShowShop();
             } else {
@@ -78,24 +73,20 @@ public class Shop : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider collider)
-    {
-        if (collider.CompareTag("Player"))
-        {
+    void OnTriggerEnter(Collider collider) {
+        if (collider.CompareTag("Player")) {
             inShopRadius = true;
         }
     }
 
-    void OnTriggerExit(Collider collider)
-    {
-        if (collider.CompareTag("Player"))
-        {
+    void OnTriggerExit(Collider collider) {
+        if (collider.CompareTag("Player")) {
             inShopRadius = false;
             StopShowShop();
         }
     }
 
-    void StartShowShop(){
+    void StartShowShop() {
         audioSource.PlayOneShot(startupClip);
         if (showShop != null) {
             StopCoroutine(showShop);
@@ -116,49 +107,222 @@ public class Shop : MonoBehaviour
         hideShop = StartCoroutine(HideShop());
     }
 
-    IEnumerator ShowShop()
-    {
+    IEnumerator ShowShop() {
         shopOpen = true;
-        while (canvasContainer.localScale.x < onScale)
-        {
+        while (canvasContainer.localScale.x < onScale) {
             canvasContainer.localScale = canvasContainer.localScale + (Vector3.one * moveStep);
             yield return new WaitForFixedUpdate();
         }
     }
-    IEnumerator HideShop()
-    {
+    IEnumerator HideShop() {
         shopOpen = false;
-        while (canvasContainer.localScale.x > offScale)
-        {
+        while (canvasContainer.localScale.x > offScale) {
             canvasContainer.localScale = canvasContainer.localScale - (Vector3.one * moveStep);
             yield return new WaitForFixedUpdate();
         }
     }
 
-    void BuyUpgrade(ShopItem item)
-    {
+    void BuyUpgrade(ShopItem item) {
         ItemType type = item.type;
         List<ShopFunctionValue> functionValues = item.functionValues;
-        switch (type)
-        {
-            case ItemType.BuyTurret:
-                {
+        Dictionary<string, string> parameters = new Dictionary<string, string>();
+        foreach (ShopFunctionValue val in functionValues) {
+            parameters.Add(val.key, val.value);
+        }
+
+        switch (type) {
+            case ItemType.AutoFire: {
+                    PlayerShooting ps = GameObject.FindObjectOfType<PlayerShooting>();
+                    ps.auto = true;
+                    break;
+                }
+            case ItemType.ChangePlayerSpeed: {
+                    PlayerMovement pm = GameObject.FindObjectOfType<PlayerMovement>();
+                    if (parameters.ContainsKey("percent")) {
+                        string p = parameters["percent"];
+                        float val = float.Parse(p);
+                        pm.speed *= val;
+                    }
+                    if (parameters.ContainsKey("value")) {
+                        string p = parameters["value"];
+                        float val = float.Parse(p);
+                        pm.speed += val;
+                    }
+                    break;
+                }
+            case ItemType.ChangePlayerBulletFrequency: {
+                    PlayerShooting ps = GameObject.FindObjectOfType<PlayerShooting>();
+                    if (parameters.ContainsKey("percent")) {
+                        string p = parameters["percent"];
+                        float val = float.Parse(p);
+                        ps.rate *= val;
+                    }
+                    if (parameters.ContainsKey("value")) {
+                        string p = parameters["value"];
+                        float val = float.Parse(p);
+                        ps.rate += val;
+                    }
+                    break;
+                }
+            case ItemType.ChangePlayerBulletSpread: {
+                    PlayerShooting ps = GameObject.FindObjectOfType<PlayerShooting>();
+                    if (parameters.ContainsKey("percent")) {
+                        string p = parameters["percent"];
+                        float val = float.Parse(p);
+                        ps.spread *= val;
+                    }
+                    if (parameters.ContainsKey("value")) {
+                        string p = parameters["value"];
+                        float val = float.Parse(p);
+                        ps.spread += val;
+                    }
+                    break;
+                }
+            case ItemType.ChangePlayerBulletDamage: {
+                    Debug.Log("Not Implemented");
+                    PlayerShooting ps = GameObject.FindObjectOfType<PlayerShooting>();
+                    if (parameters.ContainsKey("percent")) {
+                        string p = parameters["percent"];
+                        float val = float.Parse(p);
+                        ps.spread *= val;
+                    }
+                    if (parameters.ContainsKey("value")) {
+                        string p = parameters["value"];
+                        float val = float.Parse(p);
+                        ps.spread += val;
+                    }
+                    break;
+                }
+            case ItemType.ChangePlayerHealth: {
+                    PlayerHealth ph = GameObject.FindObjectOfType<PlayerHealth>();
+                    if (parameters.ContainsKey("percent")) {
+                        string p = parameters["percent"];
+                        float val = float.Parse(p);
+                        ph.AddMaxHealthPerc(val);
+                    }
+                    if (parameters.ContainsKey("value")) {
+                        string p = parameters["value"];
+                        float val = float.Parse(p);
+                        ph.AddMaxHealth(val);
+                    }
+                    break;
+                }
+            case ItemType.RefillPlayerHealth: {
+                    PlayerHealth ph = GameObject.FindObjectOfType<PlayerHealth>();
+                    if (parameters.ContainsKey("percent")) {
+                        string p = parameters["percent"];
+                        float val = float.Parse(p);
+                        ph.Heal(ph.GetHealth() * val);
+                    } else if (parameters.ContainsKey("value")) {
+                        string p = parameters["value"];
+                        float val = float.Parse(p);
+                        ph.Heal(val);
+                    } else {
+                        ph.FullHeal();
+                    }
+                    break;
+                }
+
+            case ItemType.BuyTurret: {
                     GameObject.Instantiate(items.turretPrefab, transform.position + (Vector3.down * transform.position.y), transform.rotation, transform);
                     break;
                 }
-            default:
-                {
+            case ItemType.ChangeTurretSearchSpeed: {
+                    TurretAI tai = GetComponentInChildren<TurretAI>();
+                    if (parameters.ContainsKey("percent")) {
+                        string p = parameters["percent"];
+                        float val = float.Parse(p);
+                        tai.searchSpeed *= val;
+                    }
+                    if (parameters.ContainsKey("value")) {
+                        string p = parameters["value"];
+                        float val = float.Parse(p);
+                        tai.searchSpeed += val;
+                    }
+                    break;
+                }
+            case ItemType.ChangeTurretBulletFrequency: {
+                    TurretAI tai = GetComponentInChildren<TurretAI>();
+                    if (parameters.ContainsKey("percent")) {
+                        string p = parameters["percent"];
+                        float val = float.Parse(p);
+                        tai.rate *= val;
+                    }
+                    if (parameters.ContainsKey("value")) {
+                        string p = parameters["value"];
+                        float val = float.Parse(p);
+                        tai.rate += val;
+                    }
+                    break;
+                }
+            case ItemType.ChangeTurretBulletSpread: {
+                    TurretAI tai = GetComponentInChildren<TurretAI>();
+                    if (parameters.ContainsKey("percent")) {
+                        string p = parameters["percent"];
+                        float val = float.Parse(p);
+                        tai.spread *= val;
+                    }
+                    if (parameters.ContainsKey("value")) {
+                        string p = parameters["value"];
+                        float val = float.Parse(p);
+                        tai.spread += val;
+                    }
+                    break;
+                }
+            case ItemType.ChangeTurretBulletDamage: {
+                    Debug.Log("Not Implemented");
+                    TurretAI tai = GetComponentInChildren<TurretAI>();
+                    if (parameters.ContainsKey("percent")) {
+                        string p = parameters["percent"];
+                        float val = float.Parse(p);
+                    }
+                    if (parameters.ContainsKey("value")) {
+                        string p = parameters["value"];
+                        float val = float.Parse(p);
+                    }
+                    break;
+                }
+            case ItemType.ChangeTurretHealth: {
+                    Debug.Log("Not Implemented");
+                    TurretAI tai = GetComponentInChildren<TurretAI>();
+                    if (parameters.ContainsKey("percent")) {
+                        string p = parameters["percent"];
+                        float val = float.Parse(p);
+                    }
+                    if (parameters.ContainsKey("value")) {
+                        string p = parameters["value"];
+                        float val = float.Parse(p);
+                    }
+                    break;
+                }
+            case ItemType.RefillTurretHealth: {
+                    Debug.Log("Not Implemented");
+                    TurretAI tai = GetComponentInChildren<TurretAI>();
+                    if (parameters.ContainsKey("percent")) {
+                        string p = parameters["percent"];
+                        float val = float.Parse(p);
+                    } else if (parameters.ContainsKey("value")) {
+                        string p = parameters["value"];
+                        float val = float.Parse(p);
+                    } else {
+
+                    }
+                    break;
+                }
+            default: {
                     break;
                 }
         }
         boughtItems.Add(item.id);
         GameObject UIItem = shopItemUIDict[item.id];
-        GameObject.DestroyImmediate(UIItem);
+        if (item.consumable) {
+            GameObject.DestroyImmediate(UIItem);
+        }
         audioSource.PlayOneShot(selectClip);
         scoreSystem.AddShells(-item.shellCost);
         Debug.Log("Change Me");
         scoreSystem.AddShells(-item.jellyCost);
-        
+
     }
 
 }
