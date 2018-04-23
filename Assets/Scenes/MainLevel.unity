@@ -1784,6 +1784,7 @@ MonoBehaviour:
   auto: 1
   projectile: {fileID: 1947953101413558, guid: a0ae3ffc763534e4cbccb582e2e599d3, type: 2}
   shootClip: {fileID: 8300000, guid: 97e5b463956da49a895a6df7710dafbc, type: 3}
+  strength: 1
 --- !u!82 &2124063355
 AudioSource:
   m_ObjectHideFlags: 0
