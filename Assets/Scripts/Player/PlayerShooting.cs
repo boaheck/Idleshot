@@ -14,7 +14,7 @@ public class PlayerShooting : MonoBehaviour
     float overflow = 0.0f;
     float interval;
     float timer;
-    bool fired = false;
+    bool fired, firing = false;
     ScoreSystem scores;
 
     public GameObject projectile;
@@ -32,6 +32,7 @@ public class PlayerShooting : MonoBehaviour
     void Update()
     {
         fired = Input.GetButtonDown("Fire1");
+		firing = Input.GetButton ("Fire1");
     }
 
     void FixedUpdate()
@@ -42,12 +43,12 @@ public class PlayerShooting : MonoBehaviour
 
             if (auto)
             {
-                if (fired)
+				if (fired && timer <= 0)
                 {
                     Fire();
                     timer = interval;
                 }
-                else if (Input.GetButton("Fire1"))
+				else if (firing)
                 {
                     if (timer <= 0)
                     {
@@ -68,10 +69,6 @@ public class PlayerShooting : MonoBehaviour
                         }
                         timer = interval;
                     }
-                    else
-                    {
-                        timer -= Time.fixedDeltaTime;
-                    }
                 }
             }
             else
@@ -84,12 +81,12 @@ public class PlayerShooting : MonoBehaviour
                         timer = interval;
                     }
                 }
-                else
-                {
-                    timer -= Time.fixedDeltaTime;
-                }
+                
             }
         }
+		if (timer > 0) {
+				timer -= Time.fixedDeltaTime;
+		}
         fired = false;
     }
 

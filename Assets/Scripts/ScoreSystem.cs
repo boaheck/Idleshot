@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class ScoreSystem : MonoBehaviour {
 
 	int shells = 0;
+	int jelly = 0;
 	public Text shellDisplay;
+	public Text jellyDisplay;
 
 	public int GetShells(){
 		return shells;
@@ -31,6 +33,28 @@ public class ScoreSystem : MonoBehaviour {
 
 	void updateDisplay(){
 		shellDisplay.text = "Shells: " + shells;
+		jellyDisplay.text = "Jelly: " + jelly;
+	}
+
+	public int GetJelly(){
+		return jelly;
+	}
+
+	public void AddJelly(){
+		AddJelly (1);
+	}
+
+	public void AddJelly(int amt){
+		jelly += amt;
+		if (jelly < 0) {
+			jelly = 0;
+		}
+		updateDisplay ();
+	}
+
+	public void ClearJelly(){
+		jelly = 0;
+		updateDisplay ();
 	}
 
 }
