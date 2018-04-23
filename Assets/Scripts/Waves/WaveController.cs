@@ -40,9 +40,8 @@ public class WaveController : MonoBehaviour {
 		int timeWaited=  0;
         while (timeWaited++ < timeBetweenWaves) {
 			int timeLeft = timeBetweenWaves-timeWaited;
-			Debug.Log(timeLeft+" Until next wave");
-            yield return new WaitForSeconds(1);
 			nextWaveText.text = "NEXT WAVE IN "+(timeLeft+1);
+            yield return new WaitForSeconds(1);
         }
 		switch(waveType){
 			case 0:{
