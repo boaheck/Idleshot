@@ -68,7 +68,7 @@ public class TurretHealth : MonoBehaviour {
 		UpdateHealthUI();
 	}
 
-	public void GetHealth(){
+	public float GetHealth(){
 		return health;
 	}
 }
