@@ -228,3 +228,75 @@ MonoBehaviour:
     functionValues:
     - key: value
       value: 10
+  - id: IncreaseTurretHealth1
+    name: IncreaseTurret Health
+    description: Increases the amount of health yout turret has
+    depends: 
+    thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
+    shellCost: 0
+    jellyCost: 15
+    type: 12
+    consumable: 1
+    functionValues:
+    - key: percent
+      value: 1.25
+  - id: IncreaseTurretHealth2
+    name: IncreaseTurret Health
+    description: Increases the amount of health yout turret has
+    depends: IncreaseTurretHealth1
+    thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
+    shellCost: 0
+    jellyCost: 30
+    type: 12
+    consumable: 1
+    functionValues:
+    - key: percent
+      value: 1.25
+  - id: IncreaseTurretHealth3
+    name: IncreaseTurret Health
+    description: Increases the amount of health yout turret has
+    depends: IncreaseTurretHealth2
+    thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
+    shellCost: 0
+    jellyCost: 50
+    type: 12
+    consumable: 1
+    functionValues:
+    - key: percent
+      value: 1.5
+  - id: IncreaseTurretHealth4
+    name: IncreaseTurret Health
+    description: Increases the amount of health yout turret has
+    depends: IncreaseTurretHealth3
+    thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
+    shellCost: 0
+    jellyCost: 60
+    type: 12
+    consumable: 1
+    functionValues:
+    - key: percent
+      value: 1.5
+  - id: IncreaseTurretHealth5
+    name: IncreaseTurret Health
+    description: Increases the amount of health yout turret has
+    depends: IncreaseTurretHealth4
+    thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
+    shellCost: 0
+    jellyCost: 75
+    type: 12
+    consumable: 1
+    functionValues:
+    - key: percent
+      value: 1.75
+  - id: IncreaseTurretHealth6
+    name: IncreaseTurret Health
+    description: Increases the amount of health yout turret has
+    depends: IncreaseTurretHealth5
+    thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
+    shellCost: 0
+    jellyCost: 100
+    type: 12
+    consumable: 1
+    functionValues:
+    - key: percent
+      value: 1.75
