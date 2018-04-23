@@ -7,6 +7,7 @@ public class ScoreSystem : MonoBehaviour {
 
 	int shells = 0;
 	int jelly = 0;
+	int parts = 0;
 	public Text shellDisplay;
 	public Text jellyDisplay;
 
@@ -55,6 +56,14 @@ public class ScoreSystem : MonoBehaviour {
 	public void ClearJelly(){
 		jelly = 0;
 		updateDisplay ();
+	}
+
+	public void addParts(){
+		parts++;
+	}
+
+	public int getParts(){
+		return parts;
 	}
 
 }
