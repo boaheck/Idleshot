@@ -25,8 +25,7 @@ public class EnableButtonOnScore : MonoBehaviour {
 
     public void CheckButtonValid() {
         int currentScore = scoreSystem.GetShells();
-        int currentJelly = scoreSystem.GetShells();
-        Debug.Log("Change me");
+        int currentJelly = scoreSystem.GetJelly();
         bool hasDependency = shop.BoughtItem(depends);
         button.interactable = requiredShells <= currentScore && requiredJelly < currentJelly && hasDependency;
     }

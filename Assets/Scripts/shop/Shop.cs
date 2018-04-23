@@ -320,8 +320,7 @@ public class Shop : MonoBehaviour {
         }
         audioSource.PlayOneShot(selectClip);
         scoreSystem.AddShells(-item.shellCost);
-        Debug.Log("Change Me");
-        scoreSystem.AddShells(-item.jellyCost);
+        scoreSystem.AddJelly(-item.jellyCost);
 
     }
 

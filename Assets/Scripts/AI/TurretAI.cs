@@ -27,7 +27,6 @@ public class TurretAI : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("I am a turret!");
         timer = 0;
         scores = GameObject.Find("Scores").GetComponent<ScoreSystem>();
         interval = 1.0f / rate;
@@ -70,7 +69,6 @@ public class TurretAI : MonoBehaviour
         {
             if (raycastHit.collider.gameObject.GetComponentInParent<EnemyAI>() != null)
             {
-                Debug.Log("Got thing!");
                 target = raycastHit.collider.transform.parent;
                 oneShotSource.Stop();
             }
