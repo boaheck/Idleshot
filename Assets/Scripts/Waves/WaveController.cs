@@ -72,7 +72,9 @@ public class WaveController : MonoBehaviour {
 		int spawnedAI = 0;
 		nextWaveText.gameObject.SetActive(false);
 		currentBattle = (currentBattle + 1) % battleSongs.Length;
-		music.currentTrack = battleSongs [currentBattle];
+		if(battleSongs.Length > 0){
+            music.currentTrack = battleSongs[currentBattle];
+		}
 		while(spawnedAI < enemiesToSpawn){
 			spawnedAI++;
 			SpawnPoint[] spawnPoints = GameObject.FindObjectsOfType<SpawnPoint>();

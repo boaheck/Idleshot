@@ -21,13 +21,13 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
     shellCost: 0
     jellyCost: 60
-    type: 3
+    type: 7
     consumable: 1
     functionValues: []
   - id: IncreaseTurretSearchSpeed1
     name: Increase Turret Search Speed
     description: Increases your turrets search speed
-    depends: 
+    depends: BuyTurret
     thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
     shellCost: 0
     jellyCost: 5
@@ -75,11 +75,11 @@ MonoBehaviour:
   - id: IncreaseTurretBulletFrequency1
     name: Increase Turret Bullet Frequency
     description: Increases the frequency of your turret's bullets
-    depends: 
+    depends: BuyTurret
     thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
     shellCost: 0
     jellyCost: 10
-    type: 8
+    type: 9
     consumable: 1
     functionValues:
     - key: value
@@ -123,7 +123,7 @@ MonoBehaviour:
   - id: IncreseTurretBulltSpread1
     name: Increase Turret Bullet Spread
     description: Increases your turret's bullet Spread
-    depends: 
+    depends: BuyTurret
     thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
     shellCost: 0
     jellyCost: 10
@@ -171,7 +171,7 @@ MonoBehaviour:
   - id: IncreaseTurretBulletDamage1
     name: Increase Turret Bullet Damage
     description: Increases the damege your turret bullets do
-    depends: 
+    depends: BuyTurret
     thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
     shellCost: 0
     jellyCost: 15
@@ -231,7 +231,7 @@ MonoBehaviour:
   - id: IncreaseTurretHealth1
     name: IncreaseTurret Health
     description: Increases the amount of health yout turret has
-    depends: 
+    depends: BuyTurret
     thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
     shellCost: 0
     jellyCost: 15
@@ -315,10 +315,10 @@ MonoBehaviour:
   - id: RefilTurretHealth
     name: Refil Turret Health
     description: Refils your turret's health
-    depends: 
+    depends: BuyTurret
     thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
     shellCost: 0
     jellyCost: 30
-    type: 12
+    type: 13
     consumable: 0
     functionValues: []
