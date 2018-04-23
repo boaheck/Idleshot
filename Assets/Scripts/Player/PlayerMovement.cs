@@ -11,53 +11,38 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float airAccel = 10f;
     [SerializeField] float decel = 15f;
     [SerializeField] float airDecel = 2f;
-    [SerializeField] float jumpVel = 6;
     [SerializeField] float gravity = 8;
     [SerializeField] float gravityMin = 16;
     [SerializeField] float landGravity = 18;
-    [SerializeField] float jumpBufferTime = 0.1f;
 
     Vector3 curMove, curMoveX;
-    float xVel, yVel, xIn, yIn, jumpBuffer;
-    bool jump, jumping, jumpHeld, moving;
-
+    float xVel, yVel, xIn, yIn;
+	float runDir;
+    bool moving;
+	Animator anim;
     CharacterController ctrl;
 
     void Start()
     {
         ctrl = GetComponent<CharacterController>();
+		anim = GetComponentInChildren<Animator> ();
         curMove = Vector3.zero;
-        jumpBuffer = 0;
         xVel = 0;
         yVel = -gravity;
     }
 
     void Update()
     {
-        if (Input.GetButtonDown("Jump"))
-        {
-            jump = true;
-            jumpBuffer = jumpBufferTime;
-        }
-        jumpHeld = Input.GetButton("Jump") && jumping;
+        
         xIn = Input.GetAxis("Horizontal");
         yIn = Input.GetAxis("Vertical");
         moving = Mathf.Abs(xIn) > 0.1f || Mathf.Abs(yIn) > 0.1f;
-        if (jump)
-        {
-            if (jumpBuffer > 0)
-            {
-                jumpBuffer -= Time.deltaTime;
-            }
-            else
-            {
-                jump = false;
-            }
-        }
-        else if (jumpBuffer > 0)
-        {
-            jumpBuffer = 0;
-        }
+		anim.SetBool ("moving", moving);
+		runDir = Vector3.SignedAngle (curMoveX, transform.forward, Vector3.up);
+		if (runDir < 0) {
+			runDir = (360 + runDir);
+		}
+		anim.SetFloat ("runDir", runDir / 360.0f);
     }
 
     void FixedUpdate()
@@ -72,15 +57,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 xVel = Mathf.MoveTowards(xVel, 0, decel * Time.fixedDeltaTime);
             }
-            if (jump)
-            {
-                jumping = true;
-                yVel = jumpVel;
-            }
-            else
-            {
-                yVel = -gravity * 0.5f;
-            }
+            yVel = -gravity * 0.5f;
         }
         else
         {
@@ -99,22 +76,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 xVel = Mathf.MoveTowards(xVel, 0, airDecel * Time.fixedDeltaTime);
             }
-            if (yVel > 0)
-            {
-                if (jumpHeld)
-                {
-                    yVel -= gravity * Time.deltaTime;
-                }
-                else
-                {
-                    yVel -= gravityMin * Time.deltaTime;
-                    jumping = false;
-                }
-            }
-            else
-            {
-                yVel -= landGravity * Time.deltaTime;
-            }
+            yVel -= landGravity * Time.deltaTime;
         }
         if (moving)
         {
