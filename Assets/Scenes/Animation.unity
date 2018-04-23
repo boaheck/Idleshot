@@ -728,7 +728,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1293443662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -792,11 +792,9 @@ MonoBehaviour:
   airAccel: 10
   decel: 15
   airDecel: 2
-  jumpVel: 6
   gravity: 8
   gravityMin: 16
   landGravity: 18
-  jumpBufferTime: 0.1
 --- !u!4 &1293443666
 Transform:
   m_ObjectHideFlags: 0
@@ -1007,3 +1005,45 @@ MonoBehaviour:
   auto: 1
   projectile: {fileID: 1947953101413558, guid: a0ae3ffc763534e4cbccb582e2e599d3, type: 2}
   shootClip: {fileID: 8300000, guid: 97e5b463956da49a895a6df7710dafbc, type: 3}
+--- !u!1001 &1713895815
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4247002135119496, guid: 8566e83162eeb4549aa28b603067bdfb, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -8.58379
+      objectReference: {fileID: 0}
+    - target: {fileID: 4247002135119496, guid: 8566e83162eeb4549aa28b603067bdfb, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.0000033097392
+      objectReference: {fileID: 0}
+    - target: {fileID: 4247002135119496, guid: 8566e83162eeb4549aa28b603067bdfb, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 18.509403
+      objectReference: {fileID: 0}
+    - target: {fileID: 4247002135119496, guid: 8566e83162eeb4549aa28b603067bdfb, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4247002135119496, guid: 8566e83162eeb4549aa28b603067bdfb, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4247002135119496, guid: 8566e83162eeb4549aa28b603067bdfb, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4247002135119496, guid: 8566e83162eeb4549aa28b603067bdfb, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4247002135119496, guid: 8566e83162eeb4549aa28b603067bdfb, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 8566e83162eeb4549aa28b603067bdfb, type: 2}
+  m_IsPrefabParent: 0
