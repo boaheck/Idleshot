@@ -290,7 +290,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4247002135119496}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4247002135119496
 Transform:
@@ -299,12 +299,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1536946019482522}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.58379, y: 0.0000033097392, z: 18.509403}
+  m_LocalPosition: {x: -10.910669, y: 0.0000027560945, z: 18.062342}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4729234270173404}
   - {fileID: 4145604929964436}
   - {fileID: 224686074931020738}
+  - {fileID: 4729234270173404}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -391,7 +391,7 @@ Transform:
   - {fileID: 4367881840523544}
   - {fileID: 4957015284397424}
   m_Father: {fileID: 4247002135119496}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4850635366497540
 Transform:
@@ -456,7 +456,7 @@ Animator:
   m_GameObject: {fileID: 1897331320041822}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 4f7975be64cad954db84c00c1db4d359, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fb2b1b42e28eaa842906aeff7db10b92, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -758,7 +758,7 @@ RectTransform:
   - {fileID: 224082175894967370}
   - {fileID: 224929019858069864}
   m_Father: {fileID: 4247002135119496}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

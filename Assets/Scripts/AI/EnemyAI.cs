@@ -16,15 +16,19 @@ public class EnemyAI : MonoBehaviour {
     int confidence = 0;
     int maxConfidence = 3;
     Transform closeFriend;
+	Animator anim;
 
     void Start() {
         nma = GetComponent<NavMeshAgent>();
+		anim = GetComponentInChildren<Animator> ();
     }
 
     void FixedUpdate() {
         FindTarget();
 
         GoToTarget();
+
+		anim.SetBool ("moving", hasTarget);
     }
 
     void FindTarget() {
