@@ -32,4 +32,8 @@ public class EnemyShooting : MonoBehaviour {
 	void Update () {
 		shooting = ai.hasTarget;
 	}
+
+	public void SetShotAmount(int newAmount){
+		shotAmt = newAmount;
+	}
 }
