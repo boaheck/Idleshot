@@ -204,15 +204,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 735da02eb9bae5244b6946f22c09c03b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.02886239
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 735da02eb9bae5244b6946f22c09c03b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.029
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 735da02eb9bae5244b6946f22c09c03b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.000059497354
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 735da02eb9bae5244b6946f22c09c03b, type: 3}
       propertyPath: m_LocalRotation.x
@@ -930,6 +930,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 4adec6410004f54469b6263b35ce6be0, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: e58741b6aa58939408b87fa4fbcef43a, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4adec6410004f54469b6263b35ce6be0, type: 3}
   m_IsPrefabParent: 0
@@ -1662,17 +1666,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9d6173f9c95fa44a56879cabd55213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
-  airSpeed: 6
+  speed: 6
+  airSpeed: 4
   accel: 20
   airAccel: 10
   decel: 15
   airDecel: 2
-  jumpVel: 6
   gravity: 8
   gravityMin: 16
   landGravity: 18
-  jumpBufferTime: 0.1
 --- !u!114 &1987588716
 MonoBehaviour:
   m_ObjectHideFlags: 0
