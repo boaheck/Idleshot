@@ -47,12 +47,13 @@ public class Shop : MonoBehaviour {
 
             RectTransform rtc = shopItemUI.GetComponent<RectTransform>();
             float initialPos = shopItemUIContainer.GetComponent<RectTransform>().rect.yMax - rtc.rect.yMax;
-            rtc.localPosition = new Vector3(0, initialPos + (-i * 120), 0);
+            rtc.localPosition = Vector3.zero;
 
             shopItemUIDict.Add(item.id, shopItemUI);
             i++;
         }
-        GetComponentInChildren<SetBottomToLowestChild>().Set();
+        ScrollRect sr = GetComponentInChildren<ScrollRect>();
+        sr.verticalNormalizedPosition = 1f;
     }
 
     public bool BoughtItem(string id) {
