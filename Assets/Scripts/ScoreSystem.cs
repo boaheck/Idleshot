@@ -37,23 +37,23 @@ public class ScoreSystem : MonoBehaviour {
 	}
 
 	public int GetJelly(){
-		return shells;
+		return jelly;
 	}
 
 	public void AddJelly(){
-		AddShells (1);
+		AddJelly (1);
 	}
 
 	public void AddJelly(int amt){
-		shells += amt;
-		if (shells < 0) {
-			shells = 0;
+		jelly += amt;
+		if (jelly < 0) {
+			jelly = 0;
 		}
 		updateDisplay ();
 	}
 
 	public void ClearJelly(){
-		shells = 0;
+		jelly = 0;
 		updateDisplay ();
 	}
 
