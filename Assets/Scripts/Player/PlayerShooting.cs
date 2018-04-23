@@ -53,10 +53,10 @@ public class PlayerShooting : MonoBehaviour
 
             if (auto)
             {
-				if (fired && timer <= 0)
+				if (fired)
                 {
                     Fire();
-                    timer = interval;
+					timer = interval;
                 }
 				else if (firing)
                 {
@@ -83,13 +83,9 @@ public class PlayerShooting : MonoBehaviour
             }
             else
             {
-                if (timer <= 0)
+                if (fired)
                 {
-                    if (fired)
-                    {
-                        Fire();
-                        timer = interval;
-                    }
+                    Fire();
                 }
                 
             }
