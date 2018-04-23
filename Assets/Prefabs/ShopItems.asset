@@ -38,7 +38,7 @@ MonoBehaviour:
   - id: BulletFrequency2
     name: Increase Bullet Frequency
     description: Increases the frequency in which bullets are fired by the player
-    depends: AutoFire
+    depends: BulletFrequency1
     thumbnail: {fileID: 21300000, guid: 0626b924325d1c34cafa6b22297f4e4f, type: 3}
     shellCost: 40
     jellyCost: 0
@@ -50,7 +50,7 @@ MonoBehaviour:
   - id: BulletFrequency3
     name: Increase Bullet Frequency
     description: Increases the frequency in which bullets are fired by the player
-    depends: AutoFire
+    depends: BulletFrequency2
     thumbnail: {fileID: 21300000, guid: 0626b924325d1c34cafa6b22297f4e4f, type: 3}
     shellCost: 100
     jellyCost: 0
@@ -62,7 +62,7 @@ MonoBehaviour:
   - id: BulletFrequency4
     name: Increase Bullet Frequency
     description: Increases the frequency in which bullets are fired by the player
-    depends: AutoFire
+    depends: BulletFrequency3
     thumbnail: {fileID: 21300000, guid: 0626b924325d1c34cafa6b22297f4e4f, type: 3}
     shellCost: 300
     jellyCost: 0
@@ -74,7 +74,7 @@ MonoBehaviour:
   - id: BulletFrequency5
     name: Increase Bullet Frequency
     description: Increases the frequency in which bullets are fired by the player
-    depends: AutoFire
+    depends: BulletFrequency4
     thumbnail: {fileID: 21300000, guid: 0626b924325d1c34cafa6b22297f4e4f, type: 3}
     shellCost: 500
     jellyCost: 0
@@ -86,7 +86,7 @@ MonoBehaviour:
   - id: BulletFrequency6
     name: Increase Bullet Frequency
     description: Increases the frequency in which bullets are fired by the player
-    depends: AutoFire
+    depends: BulletFrequency5
     thumbnail: {fileID: 21300000, guid: 0626b924325d1c34cafa6b22297f4e4f, type: 3}
     shellCost: 1000
     jellyCost: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   - id: BulletFrequency7
     name: Increase Bullet Frequency
     description: Increases the frequency in which bullets are fired by the player
-    depends: AutoFire
+    depends: BulletFrewquency6
     thumbnail: {fileID: 21300000, guid: 0626b924325d1c34cafa6b22297f4e4f, type: 3}
     shellCost: 2500
     jellyCost: 0
@@ -110,7 +110,7 @@ MonoBehaviour:
   - id: BulletFrequency8
     name: Increase Bullet Frequency
     description: Increases the frequency in which bullets are fired by the player
-    depends: AutoFire
+    depends: BulletFrequency7
     thumbnail: {fileID: 21300000, guid: 0626b924325d1c34cafa6b22297f4e4f, type: 3}
     shellCost: 10000
     jellyCost: 0
@@ -122,7 +122,7 @@ MonoBehaviour:
   - id: BulletFrequency9
     name: Increase Bullet Frequency
     description: Increases the frequency in which bullets are fired by the player
-    depends: AutoFire
+    depends: BulletFrequency8
     thumbnail: {fileID: 21300000, guid: 0626b924325d1c34cafa6b22297f4e4f, type: 3}
     shellCost: 50000
     jellyCost: 0
@@ -134,7 +134,7 @@ MonoBehaviour:
   - id: BulletFrequency10
     name: Increase Bullet Frequency
     description: Increases the frequency in which bullets are fired by the player
-    depends: AutoFire
+    depends: BulletFrequency9
     thumbnail: {fileID: 21300000, guid: 0626b924325d1c34cafa6b22297f4e4f, type: 3}
     shellCost: 1000000
     jellyCost: 0
@@ -191,16 +191,138 @@ MonoBehaviour:
     functionValues:
     - key: percent
       value: 0
-  - id: asdsad
-    name: ssdfdsf
-    description: 23f9032uf 0283jf023 03 9ru23 0f932f 3r 023r
+  - id: BulletDamage1
+    name: Bullet Damage
+    description: Increases the players bullet damage
     depends: 
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
-    shellCost: 0
+    shellCost: 25
     jellyCost: 0
     type: 0
-    consumable: 0
-    functionValues: []
+    consumable: 1
+    functionValues:
+    - key: percentage
+      value: 1.25
+  - id: BulletDamage2
+    name: Bullet Damage
+    description: Increases the players bullet damage
+    depends: BulletDamge1
+    thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
+    shellCost: 100
+    jellyCost: 0
+    type: 0
+    consumable: 1
+    functionValues:
+    - key: percentage
+      value: 1.5
+  - id: BulletDamage3
+    name: Bullet Damage
+    description: Increases the players bullet damage
+    depends: BulletDamage2
+    thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
+    shellCost: 200
+    jellyCost: 0
+    type: 0
+    consumable: 1
+    functionValues:
+    - key: percentage
+      value: 1.5
+  - id: BulletDamage4
+    name: Bullet Damage
+    description: Increases the players bullet damage
+    depends: BulletDamage3
+    thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
+    shellCost: 200
+    jellyCost: 0
+    type: 0
+    consumable: 1
+    functionValues:
+    - key: percentage
+      value: 1.5
+  - id: BulletDamage5
+    name: Bullet Damage
+    description: Increases the players bullet damage
+    depends: BulletDamage4
+    thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
+    shellCost: 500
+    jellyCost: 0
+    type: 0
+    consumable: 1
+    functionValues:
+    - key: percentage
+      value: 1.75
+  - id: BulletDamage6
+    name: Bullet Damage
+    description: Increases the players bullet damage
+    depends: BulletDamage5
+    thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
+    shellCost: 1000
+    jellyCost: 0
+    type: 0
+    consumable: 1
+    functionValues:
+    - key: percentage
+      value: 1.75
+  - id: BulletDamage7
+    name: Bullet Damage
+    description: Increases the players bullet damage
+    depends: BulletDamage6
+    thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
+    shellCost: 2000
+    jellyCost: 0
+    type: 0
+    consumable: 1
+    functionValues:
+    - key: percentage
+      value: 2
+  - id: BulletDamage8
+    name: Bullet Damage
+    description: Increases the players bullet damage
+    depends: BulletDamage7
+    thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
+    shellCost: 4000
+    jellyCost: 0
+    type: 0
+    consumable: 1
+    functionValues:
+    - key: percentage
+      value: 2
+  - id: BulletDamage9
+    name: Bullet Damage
+    description: Increases the players bullet damage
+    depends: BulletDamage8
+    thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
+    shellCost: 8000
+    jellyCost: 0
+    type: 0
+    consumable: 1
+    functionValues:
+    - key: percentage
+      value: 2
+  - id: BulletDamage10
+    name: Bullet Damage
+    description: Increases the players bullet damage
+    depends: BulletDamage9
+    thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
+    shellCost: 16000
+    jellyCost: 0
+    type: 0
+    consumable: 1
+    functionValues:
+    - key: percentage
+      value: 2
+  - id: BulletDamage11
+    name: Bullet Damage
+    description: Increases the players bullet damage
+    depends: BulletDamage10
+    thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
+    shellCost: 32000
+    jellyCost: 0
+    type: 0
+    consumable: 1
+    functionValues:
+    - key: percentage
+      value: 2
   - id: 2
     name: ssdfdsf
     description: 23f9032uf 0283jf023 03 9ru23 0f932f 3r 023r
