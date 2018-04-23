@@ -13,75 +13,117 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turretPrefab: {fileID: 0}
   shopItems:
-  - id: BulletSpeed1
-    name: This is the real Name
-    description: This is a description!
+  - id: AutoFire
+    name: Auto Fire
+    description: Constantly fires when you hold the fire button
+    depends: 
     thumbnail: {fileID: 21300000, guid: 5485e2f56028a3c4cb54f5caa167377e, type: 3}
-    cost: 32
-    type: 2
-    functionValues:
-    - key: frequency
-      value: 10
-  - id: BulletSpeed2
-    name: Increase Player Bullet Speed
-    description: This does the thing the title says
-    thumbnail: {fileID: 21300000, guid: 0626b924325d1c34cafa6b22297f4e4f, type: 3}
-    cost: 100
+    shellCost: 50
+    jellyCost: 0
     type: 0
+    consumable: 1
     functionValues: []
+  - id: BulletFrequency1
+    name: Increase Bullet Frequency
+    description: Increases the frequency in which bullets are fired by the player
+    depends: AutoFire
+    thumbnail: {fileID: 21300000, guid: 0626b924325d1c34cafa6b22297f4e4f, type: 3}
+    shellCost: 30
+    jellyCost: 0
+    type: 2
+    consumable: 1
+    functionValues:
+    - key: value
+      value: 5
+  - id: BulletFrequency2
+    name: Increase Bullet Frequency
+    description: Increases the frequency in which bullets are fired by the player
+    depends: AutoFire
+    thumbnail: {fileID: 21300000, guid: 0626b924325d1c34cafa6b22297f4e4f, type: 3}
+    shellCost: 40
+    jellyCost: 0
+    type: 2
+    consumable: 1
+    functionValues:
+    - key: value
+      value: 10
   - id: asdsad
     name: ssdfdsf
     description: 23f9032uf 0283jf023 03 9ru23 0f932f 3r 023r
+    depends: 
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
-    cost: -10
+    shellCost: 0
+    jellyCost: 0
     type: 0
+    consumable: 0
     functionValues: []
   - id: 2
     name: ssdfdsf
     description: 23f9032uf 0283jf023 03 9ru23 0f932f 3r 023r
+    depends: 
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
-    cost: 0
+    shellCost: 0
+    jellyCost: 0
     type: 0
+    consumable: 0
     functionValues: []
   - id: 4
     name: ssdfdsf
     description: 23f9032uf 0283jf023 03 9ru23 0f932f 3r 023r
+    depends: 
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
-    cost: 0
+    shellCost: 0
+    jellyCost: 0
     type: 0
+    consumable: 0
     functionValues: []
   - id: 78
     name: ssdfdsf
     description: 23f9032uf 0283jf023 03 9ru23 0f932f 3r 023r
+    depends: 
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
-    cost: 0
+    shellCost: 0
+    jellyCost: 0
     type: 0
+    consumable: 0
     functionValues: []
   - id: 5
     name: ssdfdsf
     description: 23f9032uf 0283jf023 03 9ru23 0f932f 3r 023r
+    depends: 
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
-    cost: 0
+    shellCost: 0
+    jellyCost: 0
     type: 0
+    consumable: 0
     functionValues: []
   - id: 6
     name: ssdfdsf
     description: 23f9032uf 0283jf023 03 9ru23 0f932f 3r 023r
+    depends: 
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
-    cost: 0
+    shellCost: 0
+    jellyCost: 0
     type: 0
+    consumable: 0
     functionValues: []
   - id: 7
     name: ssdfdsf
     description: 23f9032uf 0283jf023 03 9ru23 0f932f 3r 023r
+    depends: 
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
-    cost: 0
+    shellCost: 0
+    jellyCost: 0
     type: 0
+    consumable: 0
     functionValues: []
   - id: 345
     name: ssdfdsf
     description: 23f9032uf 0283jf023 03 9ru23 0f932f 3r 023r
+    depends: 
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
-    cost: 0
+    shellCost: 0
+    jellyCost: 0
     type: 0
+    consumable: 0
     functionValues: []
