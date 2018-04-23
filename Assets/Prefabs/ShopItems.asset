@@ -150,7 +150,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
     shellCost: 100
     jellyCost: 0
-    type: 0
+    type: 3
     consumable: 0
     functionValues:
     - key: percent
@@ -162,7 +162,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
     shellCost: 300
     jellyCost: 0
-    type: 0
+    type: 3
     consumable: 0
     functionValues:
     - key: percent
@@ -174,7 +174,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
     shellCost: 500
     jellyCost: 0
-    type: 0
+    type: 3
     consumable: 0
     functionValues:
     - key: percent
@@ -186,7 +186,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
     shellCost: 10000
     jellyCost: 0
-    type: 0
+    type: 3
     consumable: 0
     functionValues:
     - key: percent
@@ -198,7 +198,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
     shellCost: 25
     jellyCost: 0
-    type: 0
+    type: 4
     consumable: 1
     functionValues:
     - key: percentage
@@ -210,7 +210,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
     shellCost: 100
     jellyCost: 0
-    type: 0
+    type: 4
     consumable: 1
     functionValues:
     - key: percentage
@@ -222,7 +222,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
     shellCost: 200
     jellyCost: 0
-    type: 0
+    type: 4
     consumable: 1
     functionValues:
     - key: percentage
@@ -234,7 +234,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
     shellCost: 200
     jellyCost: 0
-    type: 0
+    type: 4
     consumable: 1
     functionValues:
     - key: percentage
@@ -246,7 +246,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
     shellCost: 500
     jellyCost: 0
-    type: 0
+    type: 4
     consumable: 1
     functionValues:
     - key: percentage
@@ -258,7 +258,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
     shellCost: 1000
     jellyCost: 0
-    type: 0
+    type: 4
     consumable: 1
     functionValues:
     - key: percentage
@@ -270,7 +270,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
     shellCost: 2000
     jellyCost: 0
-    type: 0
+    type: 4
     consumable: 1
     functionValues:
     - key: percentage
@@ -282,7 +282,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
     shellCost: 4000
     jellyCost: 0
-    type: 0
+    type: 4
     consumable: 1
     functionValues:
     - key: percentage
@@ -294,7 +294,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
     shellCost: 8000
     jellyCost: 0
-    type: 0
+    type: 4
     consumable: 1
     functionValues:
     - key: percentage
@@ -306,7 +306,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
     shellCost: 16000
     jellyCost: 0
-    type: 0
+    type: 4
     consumable: 1
     functionValues:
     - key: percentage
@@ -318,7 +318,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
     shellCost: 32000
     jellyCost: 0
-    type: 0
+    type: 4
     consumable: 1
     functionValues:
     - key: percentage
@@ -330,7 +330,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
     shellCost: 100
     jellyCost: 0
-    type: 0
+    type: 5
     consumable: 1
     functionValues:
     - key: value
@@ -342,7 +342,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
     shellCost: 150
     jellyCost: 0
-    type: 0
+    type: 5
     consumable: 1
     functionValues:
     - key: value
@@ -354,7 +354,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
     shellCost: 200
     jellyCost: 0
-    type: 0
+    type: 5
     consumable: 1
     functionValues:
     - key: value
@@ -366,7 +366,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
     shellCost: 300
     jellyCost: 0
-    type: 0
+    type: 5
     consumable: 1
     functionValues:
     - key: value
@@ -378,7 +378,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
     shellCost: 500
     jellyCost: 0
-    type: 0
+    type: 5
     consumable: 1
     functionValues:
     - key: value
@@ -390,7 +390,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
     shellCost: 800
     jellyCost: 0
-    type: 0
+    type: 5
     consumable: 1
     functionValues:
     - key: value
@@ -402,7 +402,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
     shellCost: 1200
     jellyCost: 0
-    type: 0
+    type: 5
     consumable: 1
     functionValues:
     - key: value
@@ -414,7 +414,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
     shellCost: 2000
     jellyCost: 0
-    type: 0
+    type: 5
     consumable: 1
     functionValues:
     - key: value
@@ -426,7 +426,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
     shellCost: 3000
     jellyCost: 0
-    type: 0
+    type: 5
     consumable: 1
     functionValues:
     - key: value
@@ -438,7 +438,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
     shellCost: 8000
     jellyCost: 0
-    type: 0
+    type: 5
     consumable: 1
     functionValues:
     - key: value
@@ -450,7 +450,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
     shellCost: 12000
     jellyCost: 0
-    type: 0
+    type: 5
     consumable: 1
     functionValues:
     - key: value
@@ -462,7 +462,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
     shellCost: 20000
     jellyCost: 0
-    type: 0
+    type: 5
     consumable: 1
     functionValues:
     - key: value
@@ -474,7 +474,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
     shellCost: 40000
     jellyCost: 0
-    type: 0
+    type: 5
     consumable: 1
     functionValues:
     - key: value
@@ -486,7 +486,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
     shellCost: 1000000
     jellyCost: 0
-    type: 0
+    type: 5
     consumable: 1
     functionValues:
     - key: value
@@ -498,7 +498,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
     shellCost: 50
     jellyCost: 0
-    type: 0
+    type: 6
     consumable: 0
     functionValues:
     - key: value
@@ -510,7 +510,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
     shellCost: 80
     jellyCost: 0
-    type: 0
+    type: 6
     consumable: 0
     functionValues:
     - key: value
@@ -522,7 +522,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
     shellCost: 300
     jellyCost: 0
-    type: 0
+    type: 6
     consumable: 0
     functionValues:
     - key: value
