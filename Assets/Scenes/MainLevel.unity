@@ -360,7 +360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037029f6b69a2d744840e7d9c554732f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  track: 2
+  track: 1
 --- !u!4 &327870105
 Transform:
   m_ObjectHideFlags: 0
@@ -665,6 +665,8 @@ MonoBehaviour:
   enemyPrefab: {fileID: 1536946019482522, guid: 8566e83162eeb4549aa28b603067bdfb,
     type: 2}
   nextWaveText: {fileID: 740860257}
+  calmSong: 1
+  battleSongs: 0200000003000000
 --- !u!1001 &855433830
 Prefab:
   m_ObjectHideFlags: 0
