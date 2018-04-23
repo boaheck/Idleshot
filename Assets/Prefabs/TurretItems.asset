@@ -120,3 +120,51 @@ MonoBehaviour:
     functionValues:
     - key: value
       value: 30
+  - id: IncreseTurretBulltSpread1
+    name: Increase Turret Bullet Spread
+    description: Increases your turret's bullet Spread
+    depends: 
+    thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
+    shellCost: 0
+    jellyCost: 10
+    type: 10
+    consumable: 1
+    functionValues:
+    - key: percent
+      value: 0.25
+  - id: IncreseTurretBulltSpread2
+    name: Increase Turret Bullet Spread
+    description: Increases your turret's bullet Spread
+    depends: IncreaseTurretBulletSpread1
+    thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
+    shellCost: 0
+    jellyCost: 30
+    type: 10
+    consumable: 1
+    functionValues:
+    - key: percent
+      value: 0.25
+  - id: IncreseTurretBulltSpread3
+    name: Increase Turret Bullet Spread
+    description: Increases your turret's bullet Spread
+    depends: IncreaseTurretBulletSpread2
+    thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
+    shellCost: 0
+    jellyCost: 50
+    type: 10
+    consumable: 1
+    functionValues:
+    - key: percent
+      value: 0.25
+  - id: IncreseTurretBulltSpread4
+    name: Increase Turret Bullet Spread
+    description: Increases your turret's bullet Spread
+    depends: IncreaseTurretBulletSpread3
+    thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
+    shellCost: 0
+    jellyCost: 100
+    type: 10
+    consumable: 1
+    functionValues:
+    - key: percent
+      value: 0.25
