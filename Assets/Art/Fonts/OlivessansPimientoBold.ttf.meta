@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: da1246507dddf2a4db7610dfbe789be9
+timeCreated: 1524507716
+licenseType: Pro
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: OlivessansPimientoBold
+  fontNames:
+  - OlivessansPimientoBold
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

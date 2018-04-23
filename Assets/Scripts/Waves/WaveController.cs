@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WaveController : MonoBehaviour {
 
@@ -12,6 +13,7 @@ public class WaveController : MonoBehaviour {
 	int waveType = 0;
 	public GameObject enemyPrefab;
 	bool spawning = false;
+	public Text nextWaveText;
 
 	void Start () {
         StartCoroutine(StartNewWave());
@@ -28,6 +30,7 @@ public class WaveController : MonoBehaviour {
 	}
 
 	IEnumerator StartNewWave() {
+		nextWaveText.gameObject.SetActive(true);
 		spawning = true;
 		wave++;
 		waveType++;
@@ -36,8 +39,10 @@ public class WaveController : MonoBehaviour {
 		}
 		int timeWaited=  0;
         while (timeWaited++ < timeBetweenWaves) {
-			Debug.Log(timeBetweenWaves-timeWaited+" Until next wave");
+			int timeLeft = timeBetweenWaves-timeWaited;
+			Debug.Log(timeLeft+" Until next wave");
             yield return new WaitForSeconds(1);
+			nextWaveText.text = "NEXT WAVE IN "+(timeLeft+1);
         }
 		switch(waveType){
 			case 0:{
@@ -60,6 +65,7 @@ public class WaveController : MonoBehaviour {
 			}
 		}
 		int spawnedAI = 0;
+		nextWaveText.gameObject.SetActive(false);
 		while(spawnedAI < enemiesToSpawn){
 			spawnedAI++;
 			SpawnPoint[] spawnPoints = GameObject.FindObjectsOfType<SpawnPoint>();
