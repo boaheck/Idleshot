@@ -158,7 +158,7 @@ MonoBehaviour:
       value: 0.25
   - id: IncreseTurretBulltSpread4
     name: Increase Turret Bullet Spread
-    description: Increases your turret's bullet Spread
+    description: Increases your turret's bullet spread
     depends: IncreaseTurretBulletSpread3
     thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
     shellCost: 0
@@ -168,3 +168,63 @@ MonoBehaviour:
     functionValues:
     - key: percent
       value: 0.25
+  - id: IncreaseTurretBulletDamage1
+    name: Increase Turret Bullet Damage
+    description: Increases the damege your turret bullets do
+    depends: 
+    thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
+    shellCost: 0
+    jellyCost: 15
+    type: 11
+    consumable: 1
+    functionValues:
+    - key: value
+      value: 2
+  - id: IncreaseTurretBulletDamage2
+    name: Increase Turret Bullet Damage
+    description: Increases the damege your turret bullets do
+    depends: IncreaseTurretBulletDamge1
+    thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
+    shellCost: 0
+    jellyCost: 30
+    type: 11
+    consumable: 1
+    functionValues:
+    - key: value
+      value: 4
+  - id: IncreaseTurretBulletDamage3
+    name: Increase Turret Bullet Damage
+    description: Increases the damege your turret bullets do
+    depends: IncreaseTurretBulletDamge2
+    thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
+    shellCost: 0
+    jellyCost: 50
+    type: 11
+    consumable: 1
+    functionValues:
+    - key: value
+      value: 6
+  - id: IncreaseTurretBulletDamage4
+    name: Increase Turret Bullet Damage
+    description: Increases the damege your turret bullets do
+    depends: IncreaseTurretBulletDamge3
+    thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
+    shellCost: 0
+    jellyCost: 75
+    type: 11
+    consumable: 1
+    functionValues:
+    - key: value
+      value: 8
+  - id: IncreaseTurretBulletDamage5
+    name: Increase Turret Bullet Damage
+    description: Increases the damege your turret bullets do
+    depends: IncreaseTurretBulletDamge4
+    thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
+    shellCost: 0
+    jellyCost: 120
+    type: 11
+    consumable: 1
+    functionValues:
+    - key: value
+      value: 10
