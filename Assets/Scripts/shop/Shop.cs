@@ -6,7 +6,7 @@ public class Shop : MonoBehaviour {
 
     Transform canvasContainer;
     float offScale = 0.05f;
-    float onScale = 1.5f;
+    float onScale = 1f;
     float moveStep = 0.1f;
     Coroutine showShop, hideShop;
     bool inShopRadius = false;
