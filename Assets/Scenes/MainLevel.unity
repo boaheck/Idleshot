@@ -202,9 +202,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 12
       objectReference: {fileID: 0}
-    - target: {fileID: 82631895232445928, guid: b61ffd457b4485141b9ece67d79e8782,
+    - target: {fileID: 224741950068384068, guid: b61ffd457b4485141b9ece67d79e8782,
         type: 2}
-      propertyPath: spreadCustomCurve.m_RotationOrder
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224741950068384068, guid: b61ffd457b4485141b9ece67d79e8782,
+        type: 2}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224147234612110728, guid: b61ffd457b4485141b9ece67d79e8782,
@@ -222,25 +227,10 @@ Prefab:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 224741950068384068, guid: b61ffd457b4485141b9ece67d79e8782,
-        type: 2}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224741950068384068, guid: b61ffd457b4485141b9ece67d79e8782,
-        type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224741950068384068, guid: b61ffd457b4485141b9ece67d79e8782,
-        type: 2}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 224557006420093128, guid: b61ffd457b4485141b9ece67d79e8782,
         type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.0000018122993
+      propertyPath: m_SizeDelta.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b61ffd457b4485141b9ece67d79e8782, type: 2}
@@ -583,6 +573,11 @@ Prefab:
     - target: {fileID: 6400042, guid: 53baf163178f5d5479415da36371b993, type: 3}
       propertyPath: m_Convex
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114984904898722980, guid: 8566e83162eeb4549aa28b603067bdfb,
+        type: 2}
+      propertyPath: maxDrop
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 53baf163178f5d5479415da36371b993, type: 3}
@@ -1949,9 +1944,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 14
       objectReference: {fileID: 0}
-    - target: {fileID: 82631895232445928, guid: b61ffd457b4485141b9ece67d79e8782,
+    - target: {fileID: 1146970524484838, guid: b61ffd457b4485141b9ece67d79e8782, type: 2}
+      propertyPath: m_Name
+      value: TurretShop (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 224741950068384068, guid: b61ffd457b4485141b9ece67d79e8782,
         type: 2}
-      propertyPath: spreadCustomCurve.m_RotationOrder
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224741950068384068, guid: b61ffd457b4485141b9ece67d79e8782,
+        type: 2}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224147234612110728, guid: b61ffd457b4485141b9ece67d79e8782,
@@ -1969,14 +1973,14 @@ Prefab:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 224741950068384068, guid: b61ffd457b4485141b9ece67d79e8782,
+    - target: {fileID: 224557006420093128, guid: b61ffd457b4485141b9ece67d79e8782,
         type: 2}
-      propertyPath: m_AnchorMax.x
-      value: 0
+      propertyPath: m_AnchoredPosition.y
+      value: 0.000035882713
       objectReference: {fileID: 0}
-    - target: {fileID: 224741950068384068, guid: b61ffd457b4485141b9ece67d79e8782,
+    - target: {fileID: 224557006420093128, guid: b61ffd457b4485141b9ece67d79e8782,
         type: 2}
-      propertyPath: m_AnchorMax.y
+      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224741950068384068, guid: b61ffd457b4485141b9ece67d79e8782,

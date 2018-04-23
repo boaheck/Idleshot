@@ -11,22 +11,35 @@ public class EnableButtonOnScore : MonoBehaviour {
     Button button;
     ScoreSystem scoreSystem;
     Shop shop;
+    RectTransform rectTransform;
+    Rect initialRect;
 
     void Start() {
-        button = GetComponent<Button>();
+        rectTransform = GetComponent<RectTransform>();
+        initialRect = rectTransform.rect;
+        button = transform.GetChild(0).GetComponent<Button>();
         shop = GetComponentInParent<Shop>();
         scoreSystem = GameObject.FindObjectOfType<ScoreSystem>();
-        CheckButtonValid();
+        CheckValid();
     }
 
     void FixedUpdate() {
-        CheckButtonValid();
+        CheckValid();
     }
 
-    public void CheckButtonValid() {
+    public void CheckValid() {
         int currentScore = scoreSystem.GetShells();
         int currentJelly = scoreSystem.GetJelly();
         bool hasDependency = shop.BoughtItem(depends);
-        button.interactable = requiredShells <= currentScore && requiredJelly < currentJelly && hasDependency;
+        button.interactable = requiredShells <= currentScore && requiredJelly <= currentJelly && hasDependency;
+        GameObject child= transform.GetChild(0).gameObject;
+        if(!hasDependency && child.active){
+            child.SetActive(false);
+            rectTransform.sizeDelta = new Vector2(0,-30);
+        }
+        if(hasDependency && !child.active){
+            child.SetActive(true);
+            rectTransform.sizeDelta = new Vector2(initialRect.width,initialRect.height);
+        }
     }
 }

@@ -46,9 +46,8 @@ public class WaveController : MonoBehaviour {
 		int timeWaited=  0;
         while (timeWaited++ < timeBetweenWaves) {
 			int timeLeft = timeBetweenWaves-timeWaited;
-			Debug.Log(timeLeft+" Until next wave");
-            yield return new WaitForSeconds(1);
 			nextWaveText.text = "NEXT WAVE IN "+(timeLeft+1);
+            yield return new WaitForSeconds(1);
         }
 		switch(waveType){
 			case 0:{
@@ -73,7 +72,9 @@ public class WaveController : MonoBehaviour {
 		int spawnedAI = 0;
 		nextWaveText.gameObject.SetActive(false);
 		currentBattle = (currentBattle + 1) % battleSongs.Length;
-		music.currentTrack = battleSongs [currentBattle];
+		if(battleSongs.Length > 0){
+            music.currentTrack = battleSongs[currentBattle];
+		}
 		while(spawnedAI < enemiesToSpawn){
 			spawnedAI++;
 			SpawnPoint[] spawnPoints = GameObject.FindObjectsOfType<SpawnPoint>();
