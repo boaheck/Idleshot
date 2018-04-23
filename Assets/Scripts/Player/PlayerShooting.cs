@@ -39,6 +39,14 @@ public class PlayerShooting : MonoBehaviour
 
     void FixedUpdate()
     {
+        #if UNITY_EDITOR
+            if(Input.GetKeyDown(KeyCode.P)){
+                EnemyAI[] enemies = GameObject.FindObjectsOfType<EnemyAI>();
+                foreach(EnemyAI ai in enemies){
+                    GameObject.Destroy(ai.gameObject);
+                }
+            }
+        #endif
         bool onUI = EventSystem.current.IsPointerOverGameObject();
         if (!onUI)
         {
