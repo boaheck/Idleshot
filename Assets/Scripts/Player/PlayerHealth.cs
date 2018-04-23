@@ -20,7 +20,7 @@ public class PlayerHealth : MonoBehaviour {
 	}
 
 	void UpdateHealthUI () {
-		healthBar.rectTransform.SetSizeWithCurrentAnchors (RectTransform.Axis.Horizontal, hBarWidth * (health/maxHealth));
+		healthBar.fillAmount = health/maxHealth;
 		healthDisplay.text = (int)health + "/" + (int)maxHealth;
 	}
 

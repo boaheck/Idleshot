@@ -13,6 +13,7 @@ public class EnemyHealth : MonoBehaviour {
 	[SerializeField]float maxHealth = 100f;
 	[SerializeField]int maxDrop = 5;
 	public GameObject jelly;
+	public GameObject deathParticle;
 
 
 	void Start () {
@@ -48,6 +49,7 @@ public class EnemyHealth : MonoBehaviour {
 			Instantiate (jelly, transform.position, Quaternion.identity);
 		}
 		Destroy (transform.parent.gameObject);
+		GameObject.Instantiate(deathParticle,transform.position,Quaternion.identity);
 	}
 
 	public void SetMaxHealth(float val){
