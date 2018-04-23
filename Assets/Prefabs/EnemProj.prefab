@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 199848037415830902}
   - component: {fileID: 54024057459377434}
   - component: {fileID: 135607172919825826}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: EnemProj
   m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
@@ -115,6 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   time: 5
   velocity: 10
+  damage: 1
 --- !u!135 &135607172919825826
 SphereCollider:
   m_ObjectHideFlags: 1
