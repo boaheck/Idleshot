@@ -179,7 +179,7 @@ public class Shop : MonoBehaviour {
                     break;
                 }
             case ItemType.ChangePlayerBulletDamage: {
-                    Debug.Log("To implement");
+                    Debug.Log("Not Implemented");
                     PlayerShooting ps = GameObject.FindObjectOfType<PlayerShooting>();
                     if (parameters.ContainsKey("percent")) {
                         string p = parameters["percent"];
@@ -212,14 +212,12 @@ public class Shop : MonoBehaviour {
                     if (parameters.ContainsKey("percent")) {
                         string p = parameters["percent"];
                         float val = float.Parse(p);
-                        ph.Heal(ph.GetHealth()*val);
-                    }
-                    else if (parameters.ContainsKey("value")) {
+                        ph.Heal(ph.GetHealth() * val);
+                    } else if (parameters.ContainsKey("value")) {
                         string p = parameters["value"];
                         float val = float.Parse(p);
                         ph.Heal(val);
-                    }
-                    else{
+                    } else {
                         ph.FullHeal();
                     }
                     break;
@@ -231,26 +229,84 @@ public class Shop : MonoBehaviour {
                 }
             case ItemType.ChangeTurretSearchSpeed: {
                     TurretAI tai = GetComponentInChildren<TurretAI>();
+                    if (parameters.ContainsKey("percent")) {
+                        string p = parameters["percent"];
+                        float val = float.Parse(p);
+                        tai.searchSpeed *= val;
+                    }
+                    if (parameters.ContainsKey("value")) {
+                        string p = parameters["value"];
+                        float val = float.Parse(p);
+                        tai.searchSpeed += val;
+                    }
                     break;
                 }
             case ItemType.ChangeTurretBulletFrequency: {
                     TurretAI tai = GetComponentInChildren<TurretAI>();
+                    if (parameters.ContainsKey("percent")) {
+                        string p = parameters["percent"];
+                        float val = float.Parse(p);
+                        tai.rate *= val;
+                    }
+                    if (parameters.ContainsKey("value")) {
+                        string p = parameters["value"];
+                        float val = float.Parse(p);
+                        tai.rate += val;
+                    }
                     break;
                 }
             case ItemType.ChangeTurretBulletSpread: {
                     TurretAI tai = GetComponentInChildren<TurretAI>();
+                    if (parameters.ContainsKey("percent")) {
+                        string p = parameters["percent"];
+                        float val = float.Parse(p);
+                        tai.spread *= val;
+                    }
+                    if (parameters.ContainsKey("value")) {
+                        string p = parameters["value"];
+                        float val = float.Parse(p);
+                        tai.spread += val;
+                    }
                     break;
                 }
             case ItemType.ChangeTurretBulletDamage: {
+                    Debug.Log("Not Implemented");
                     TurretAI tai = GetComponentInChildren<TurretAI>();
+                    if (parameters.ContainsKey("percent")) {
+                        string p = parameters["percent"];
+                        float val = float.Parse(p);
+                    }
+                    if (parameters.ContainsKey("value")) {
+                        string p = parameters["value"];
+                        float val = float.Parse(p);
+                    }
                     break;
                 }
             case ItemType.ChangeTurretHealth: {
+                    Debug.Log("Not Implemented");
                     TurretAI tai = GetComponentInChildren<TurretAI>();
+                    if (parameters.ContainsKey("percent")) {
+                        string p = parameters["percent"];
+                        float val = float.Parse(p);
+                    }
+                    if (parameters.ContainsKey("value")) {
+                        string p = parameters["value"];
+                        float val = float.Parse(p);
+                    }
                     break;
                 }
             case ItemType.RefillTurretHealth: {
+                    Debug.Log("Not Implemented");
                     TurretAI tai = GetComponentInChildren<TurretAI>();
+                    if (parameters.ContainsKey("percent")) {
+                        string p = parameters["percent"];
+                        float val = float.Parse(p);
+                    } else if (parameters.ContainsKey("value")) {
+                        string p = parameters["value"];
+                        float val = float.Parse(p);
+                    } else {
+
+                    }
                     break;
                 }
             default: {

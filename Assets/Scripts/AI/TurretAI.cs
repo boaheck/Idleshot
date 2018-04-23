@@ -6,8 +6,10 @@ public class TurretAI : MonoBehaviour
 {
 
     [SerializeField] Vector3 shotOffset = Vector3.zero;
-    [SerializeField] float rate = 5;
-    [SerializeField] float spread = 5.0f;
+    [SerializeField] public float rate = 5;
+    [SerializeField] public float spread = 5.0f;
+
+    public float searchSpeed = 1f;
 
     public GameObject projectile;
 
@@ -60,7 +62,7 @@ public class TurretAI : MonoBehaviour
 
     void FindTarget()
     {
-        transform.Rotate(new Vector3(0, 1f, 0));
+        transform.Rotate(new Vector3(0, searchSpeed, 0));
         Ray ray = new Ray(transform.position, transform.forward);
         Debug.DrawRay(ray.origin, ray.direction * sightDistance, Color.green);
         RaycastHit raycastHit;
