@@ -179,17 +179,16 @@ public class Shop : MonoBehaviour {
                     break;
                 }
             case ItemType.ChangePlayerBulletDamage: {
-                    Debug.Log("Not Implemented");
                     PlayerShooting ps = GameObject.FindObjectOfType<PlayerShooting>();
                     if (parameters.ContainsKey("percent")) {
                         string p = parameters["percent"];
                         float val = float.Parse(p);
-                        ps.spread *= val;
+                        ps.strength *= val;
                     }
                     if (parameters.ContainsKey("value")) {
                         string p = parameters["value"];
                         float val = float.Parse(p);
-                        ps.spread += val;
+                        ps.strength += val;
                     }
                     break;
                 }
@@ -270,42 +269,47 @@ public class Shop : MonoBehaviour {
                     break;
                 }
             case ItemType.ChangeTurretBulletDamage: {
-                    Debug.Log("Not Implemented");
                     TurretAI tai = GetComponentInChildren<TurretAI>();
                     if (parameters.ContainsKey("percent")) {
                         string p = parameters["percent"];
                         float val = float.Parse(p);
+                        tai.strength *= val;
                     }
                     if (parameters.ContainsKey("value")) {
                         string p = parameters["value"];
                         float val = float.Parse(p);
+                        tai.strength += val;
                     }
+                    
                     break;
                 }
             case ItemType.ChangeTurretHealth: {
-                    Debug.Log("Not Implemented");
-                    TurretAI tai = GetComponentInChildren<TurretAI>();
+                    TurretHealth th = GetComponentInChildren<TurretHealth>();
                     if (parameters.ContainsKey("percent")) {
                         string p = parameters["percent"];
                         float val = float.Parse(p);
+                        th.AddMaxHealthPerc(val);
                     }
                     if (parameters.ContainsKey("value")) {
                         string p = parameters["value"];
                         float val = float.Parse(p);
+                        th.AddMaxHealth(val);
                     }
                     break;
                 }
             case ItemType.RefillTurretHealth: {
-                    Debug.Log("Not Implemented");
-                    TurretAI tai = GetComponentInChildren<TurretAI>();
+                    TurretHealth th = GetComponentInChildren<TurretHealth>();
                     if (parameters.ContainsKey("percent")) {
                         string p = parameters["percent"];
                         float val = float.Parse(p);
+                        th.Heal(th.GetHealth()*val);
+                        
                     } else if (parameters.ContainsKey("value")) {
                         string p = parameters["value"];
                         float val = float.Parse(p);
+                        th.Heal(val);
                     } else {
-
+                        th.FullHeal();
                     }
                     break;
                 }
@@ -320,8 +324,7 @@ public class Shop : MonoBehaviour {
         }
         audioSource.PlayOneShot(selectClip);
         scoreSystem.AddShells(-item.shellCost);
-        Debug.Log("Change Me");
-        scoreSystem.AddShells(-item.jellyCost);
+        scoreSystem.AddJelly(-item.jellyCost);
 
     }
 

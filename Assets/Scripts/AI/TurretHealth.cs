@@ -61,4 +61,14 @@ public class TurretHealth : MonoBehaviour {
 		Heal(amount);
 		UpdateHealthUI ();
 	}
+
+	public void AddMaxHealthPerc(float amount){
+		maxHealth *= amount;
+		Heal(maxHealth*amount);
+		UpdateHealthUI();
+	}
+
+	public void GetHealth(){
+		return health;
+	}
 }
