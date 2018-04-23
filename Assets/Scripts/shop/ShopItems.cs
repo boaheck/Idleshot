@@ -7,6 +7,7 @@ public struct ShopFunctionValue {
     public string key, value;
 }
 public enum ItemType {
+    AutoFire,
     ChangePlayerSpeed,
     ChangePlayerBulletFrequency,
     ChangePlayerBulletSpread,
@@ -33,6 +34,7 @@ public struct ShopItem {
     public int shellCost;
     public int jellyCost;
     public ItemType type;
+    public bool consumable;
     [SerializeField]
     public List<ShopFunctionValue> functionValues;
 }

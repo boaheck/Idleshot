@@ -7,9 +7,9 @@ public class PlayerShooting : MonoBehaviour
 {
 
     [SerializeField] Vector3 shotOffset = Vector3.zero;
-    [SerializeField] float rate = 5;
-    [SerializeField] float spread = 5.0f;
-    [SerializeField] bool auto = false;
+    [SerializeField] public float rate = 5;
+    [SerializeField] public float spread = 5.0f;
+    [SerializeField] public bool auto = false;
 
     float overflow = 0.0f;
     float interval;
