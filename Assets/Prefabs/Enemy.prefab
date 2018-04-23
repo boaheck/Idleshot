@@ -65,6 +65,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4145604929964436}
   - component: {fileID: 114004757870781250}
+  - component: {fileID: 136929684300184848}
   m_Layer: 0
   m_Name: Shooter
   m_TagString: Untagged
@@ -245,7 +246,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1536946019482522}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.81, y: 0.97, z: -1.2}
+  m_LocalPosition: {x: -5.0997868, y: 0.0000028643394, z: 16.018547}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4729234270173404}
@@ -437,6 +438,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasTarget: 1
+--- !u!136 &136929684300184848
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1065580423254314}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.2, z: 0}
 --- !u!137 &137918854094618308
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
