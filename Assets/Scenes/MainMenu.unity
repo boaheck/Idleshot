@@ -1571,8 +1571,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetVolume: 1
-  ambientVolume: 0.2
-  fadeTime: 30
+  ambientVolume: 0.05
+  fadeTime: 5
   tracks:
   - {fileID: 699654518}
   - {fileID: 1812129912}

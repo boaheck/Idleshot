@@ -14,9 +14,14 @@ public class WaveController : MonoBehaviour {
 	public GameObject enemyPrefab;
 	bool spawning = false;
 	public Text nextWaveText;
+	MusicSystem music;
+	public int calmSong;
+	public int[] battleSongs;
+	int currentBattle = 0;
 
 	void Start () {
         StartCoroutine(StartNewWave());
+		music = FindObjectOfType<MusicSystem> ();
 	}
 	
 	void FixedUpdate () {
@@ -24,6 +29,7 @@ public class WaveController : MonoBehaviour {
 
             EnemyAI[] enemies = GameObject.FindObjectsOfType<EnemyAI>();
 			if(enemies.Length <= 0){
+				music.currentTrack = calmSong;
 				StartCoroutine(StartNewWave());
 			}
 		}
@@ -66,6 +72,8 @@ public class WaveController : MonoBehaviour {
 		}
 		int spawnedAI = 0;
 		nextWaveText.gameObject.SetActive(false);
+		currentBattle = (currentBattle + 1) % battleSongs.Length;
+		music.currentTrack = battleSongs [currentBattle];
 		while(spawnedAI < enemiesToSpawn){
 			spawnedAI++;
 			SpawnPoint[] spawnPoints = GameObject.FindObjectsOfType<SpawnPoint>();
