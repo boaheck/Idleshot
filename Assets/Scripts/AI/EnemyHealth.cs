@@ -49,4 +49,9 @@ public class EnemyHealth : MonoBehaviour {
 		}
 		Destroy (transform.parent.gameObject);
 	}
+
+	public void SetMaxHealth(float val){
+		maxHealth = val;
+		health = val;
+	}
 }
