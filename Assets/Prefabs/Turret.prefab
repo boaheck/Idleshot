@@ -46,6 +46,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1353358909139524
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4789867531487478}
+  m_Layer: 0
+  m_Name: CreationParticle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1401789288028390
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,12 +153,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1026171852297826}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 9.67184}
+  m_LocalPosition: {x: -9.340776, y: 0.0000021887895, z: 12.268}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224807015595899484}
   - {fileID: 4009146561437624}
   - {fileID: 4261002540118486}
+  - {fileID: 4789867531487478}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -159,6 +175,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4213615393329028}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4789867531487478
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1353358909139524}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4213615393329028}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23513736088139008
 MeshRenderer:
@@ -514,10 +543,12 @@ MonoBehaviour:
   shotOffset: {x: 0, y: 0, z: 0.75}
   rate: 5
   spread: 5
+  searchSpeed: 1
   projectile: {fileID: 1947953101413558, guid: a0ae3ffc763534e4cbccb582e2e599d3, type: 2}
   startupClip: {fileID: 8300000, guid: 98f8fbb41db4d46b980c9bcee8a1503f, type: 3}
   backgroundClip: {fileID: 8300000, guid: 36bbc69b955c24bda833fd255e4bb6a1, type: 3}
   lookingClip: {fileID: 8300000, guid: 00d2789f562094c9797ebef969a13feb, type: 3}
+  strength: 1
 --- !u!114 &114973110726811528
 MonoBehaviour:
   m_ObjectHideFlags: 1

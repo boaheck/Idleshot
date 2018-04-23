@@ -5,9 +5,9 @@ using UnityEngine.UI;
 public class Shop : MonoBehaviour {
 
     Transform canvasContainer;
-    float offScale = 0.2f;
-    float onScale = 1f;
-    float moveStep = 0.03f;
+    float offScale = 0.05f;
+    float onScale = 1.5f;
+    float moveStep = 0.1f;
     Coroutine showShop, hideShop;
     bool inShopRadius = false;
     bool shopOpen = false;
@@ -28,9 +28,10 @@ public class Shop : MonoBehaviour {
         scoreSystem = GameObject.FindObjectOfType<ScoreSystem>();
         int i = 0;
         foreach (ShopItem item in items.shopItems) {
-            GameObject shopItemUI = GameObject.Instantiate(shopItemUIPrefab, Vector3.zero, shopItemUIContainer.rotation, shopItemUIContainer);
+            GameObject shopItemUI = GameObject.Instantiate(shopItemUIPrefab, shopItemUIContainer.position, shopItemUIContainer.rotation, shopItemUIContainer);
             shopItemUI.name = item.id;
-            Button button = shopItemUI.GetComponent<Button>();
+            GameObject child = shopItemUI.transform.GetChild(0).gameObject;
+            Button button = child.GetComponent<Button>();
             button.onClick.AddListener(() => {
                 BuyUpgrade(item);
             });
@@ -40,19 +41,25 @@ public class Shop : MonoBehaviour {
             ebos.requiredJelly = item.jellyCost;
             ebos.depends = item.depends;
 
-            Transform siTransform = shopItemUI.transform;
+            string costString = "";
+            if(item.shellCost > 0){
+                costString += item.shellCost+" Shells";
+            }
+            if(item.jellyCost > 0){
+                costString += item.jellyCost+" Jelly";
+            }
+
+            Transform siTransform = child.transform;
             siTransform.Find("Image").GetComponent<Image>().sprite = item.thumbnail;
             siTransform.Find("Name").GetComponent<Text>().text = item.name;
             siTransform.Find("Description").GetComponent<Text>().text = item.description;
-
-            RectTransform rtc = shopItemUI.GetComponent<RectTransform>();
-            float initialPos = shopItemUIContainer.GetComponent<RectTransform>().rect.yMax - rtc.rect.yMax;
-            rtc.localPosition = new Vector3(0, initialPos + (-i * 120), 0);
+            siTransform.Find("Cost").GetComponent<Text>().text = costString;
 
             shopItemUIDict.Add(item.id, shopItemUI);
             i++;
         }
-        GetComponentInChildren<SetBottomToLowestChild>().Set();
+        ScrollRect sr = GetComponentInChildren<ScrollRect>();
+        sr.verticalNormalizedPosition = 1f;
     }
 
     public bool BoughtItem(string id) {
@@ -113,6 +120,7 @@ public class Shop : MonoBehaviour {
             canvasContainer.localScale = canvasContainer.localScale + (Vector3.one * moveStep);
             yield return new WaitForFixedUpdate();
         }
+        canvasContainer.localEulerAngles = Vector3.one*onScale;
     }
     IEnumerator HideShop() {
         shopOpen = false;
@@ -120,6 +128,7 @@ public class Shop : MonoBehaviour {
             canvasContainer.localScale = canvasContainer.localScale - (Vector3.one * moveStep);
             yield return new WaitForFixedUpdate();
         }
+        canvasContainer.localEulerAngles = Vector3.one*offScale;
     }
 
     void BuyUpgrade(ShopItem item) {

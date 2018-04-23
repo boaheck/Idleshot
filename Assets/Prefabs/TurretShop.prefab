@@ -691,7 +691,7 @@ MonoBehaviour:
   startupClip: {fileID: 8300000, guid: bd91276a3257f44f58646803ad615b4b, type: 3}
   selectClip: {fileID: 8300000, guid: cae9a043841c94753a30319da2ca3e5c, type: 3}
   shopItemUIContainer: {fileID: 224557006420093128}
-  shopItemUIPrefab: {fileID: 1371829759785882, guid: b412b4bf03b2d44e9a586678d4fbe148,
+  shopItemUIPrefab: {fileID: 1993382511608480, guid: b412b4bf03b2d44e9a586678d4fbe148,
     type: 2}
 --- !u!114 &114595796506840228
 MonoBehaviour:
