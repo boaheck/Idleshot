@@ -25,6 +25,8 @@ public class TurretAI : MonoBehaviour
     [SerializeField] AudioClip lookingClip;
     private AudioSource bgSource, oneShotSource;
 
+    public float strength = 1f;
+
     void Start()
     {
         timer = 0;
@@ -119,7 +121,8 @@ public class TurretAI : MonoBehaviour
     void Fire()
     {
         Quaternion randRot = Quaternion.Euler(Vector3.up * Random.Range(-spread, spread));
-        Instantiate(projectile, transform.position + (transform.rotation * shotOffset), transform.rotation * randRot);
+        GameObject bullet = Instantiate(projectile, transform.position + (transform.rotation * shotOffset), transform.rotation * randRot);
+        bullet.GetComponent<Projectile>().damage = strength;
         scores.AddShells();
     }
 

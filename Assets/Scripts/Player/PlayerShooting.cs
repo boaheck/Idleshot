@@ -21,6 +21,8 @@ public class PlayerShooting : MonoBehaviour
     public AudioClip shootClip;
     private AudioSource audioSource;
 
+    public float strength = 1f;
+
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -95,7 +97,8 @@ public class PlayerShooting : MonoBehaviour
         audioSource.pitch = Random.Range(0.7f, 1.1f);
         audioSource.PlayOneShot(shootClip);
         Quaternion randRot = Quaternion.Euler(Vector3.up * Random.Range(-spread, spread));
-        Instantiate(projectile, transform.position + (transform.rotation * shotOffset), transform.rotation * randRot);
+        GameObject bullet = Instantiate(projectile, transform.position + (transform.rotation * shotOffset), transform.rotation * randRot);
+        bullet.GetComponent<Projectile>().damage = strength;
         scores.AddShells();
     }
 }

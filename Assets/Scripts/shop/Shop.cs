@@ -179,17 +179,16 @@ public class Shop : MonoBehaviour {
                     break;
                 }
             case ItemType.ChangePlayerBulletDamage: {
-                    Debug.Log("Not Implemented");
                     PlayerShooting ps = GameObject.FindObjectOfType<PlayerShooting>();
                     if (parameters.ContainsKey("percent")) {
                         string p = parameters["percent"];
                         float val = float.Parse(p);
-                        ps.spread *= val;
+                        ps.strength *= val;
                     }
                     if (parameters.ContainsKey("value")) {
                         string p = parameters["value"];
                         float val = float.Parse(p);
-                        ps.spread += val;
+                        ps.strength += val;
                     }
                     break;
                 }
@@ -270,15 +269,16 @@ public class Shop : MonoBehaviour {
                     break;
                 }
             case ItemType.ChangeTurretBulletDamage: {
-                    Debug.Log("Not Implemented");
                     TurretAI tai = GetComponentInChildren<TurretAI>();
                     if (parameters.ContainsKey("percent")) {
                         string p = parameters["percent"];
                         float val = float.Parse(p);
+                        tai.strength *= val;
                     }
                     if (parameters.ContainsKey("value")) {
                         string p = parameters["value"];
                         float val = float.Parse(p);
+                        tai.strength += val;
                     }
                     
                     break;
