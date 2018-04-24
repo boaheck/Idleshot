@@ -7,6 +7,7 @@ public class EnableButtonOnScore : MonoBehaviour {
 
     public int requiredShells;
     public int requiredJelly;
+	public int requiredParts;
     public string depends;
     Button button;
     ScoreSystem scoreSystem;
@@ -30,8 +31,9 @@ public class EnableButtonOnScore : MonoBehaviour {
     public void CheckValid() {
         int currentScore = scoreSystem.GetShells();
         int currentJelly = scoreSystem.GetJelly();
+		int currentParts = scoreSystem.getParts ();
         bool hasDependency = shop.BoughtItem(depends);
-        button.interactable = requiredShells <= currentScore && requiredJelly <= currentJelly && hasDependency;
+		button.interactable = requiredShells <= currentScore && requiredJelly <= currentJelly && requiredParts <= currentParts;
         GameObject child= transform.GetChild(0).gameObject;
         if(!hasDependency && child.active){
             child.SetActive(false);

@@ -543,7 +543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotOffset: {x: 0, y: 0, z: 0.75}
-  rate: 5
+  rate: 2
   spread: 5
   searchSpeed: 1
   projectile: {fileID: 1947953101413558, guid: a0ae3ffc763534e4cbccb582e2e599d3, type: 2}
