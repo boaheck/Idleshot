@@ -18,7 +18,7 @@ MonoBehaviour:
     name: Buy Turret
     description: Buys a turret
     depends: 
-    thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
+    thumbnail: {fileID: 21300000, guid: a3983c59ebf804b4abba687bd7c9e92f, type: 3}
     shellCost: 0
     jellyCost: 60
     type: 7
@@ -28,7 +28,7 @@ MonoBehaviour:
     name: Increase Turret Search Speed
     description: Increases your turrets search speed
     depends: BuyTurret
-    thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
+    thumbnail: {fileID: 21300000, guid: d320dc28a34e7e848a7e44c9b6051917, type: 3}
     shellCost: 0
     jellyCost: 5
     type: 8
@@ -40,7 +40,7 @@ MonoBehaviour:
     name: Increase Turret Search Speed
     description: Increases your turrets search speed
     depends: IncreaseTurretSearchSpeed1
-    thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
+    thumbnail: {fileID: 21300000, guid: d320dc28a34e7e848a7e44c9b6051917, type: 3}
     shellCost: 0
     jellyCost: 10
     type: 8
@@ -52,7 +52,7 @@ MonoBehaviour:
     name: Increase Turret Search Speed
     description: Increases your turrets search speed
     depends: IncreaseTurretSearchSpeed2
-    thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
+    thumbnail: {fileID: 21300000, guid: d320dc28a34e7e848a7e44c9b6051917, type: 3}
     shellCost: 0
     jellyCost: 15
     type: 8
@@ -64,7 +64,7 @@ MonoBehaviour:
     name: Increase Turret Search Speed
     description: Increases your turrets search speed
     depends: IncreaseTurretSearchSpeed3
-    thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
+    thumbnail: {fileID: 21300000, guid: d320dc28a34e7e848a7e44c9b6051917, type: 3}
     shellCost: 0
     jellyCost: 20
     type: 8
@@ -76,7 +76,7 @@ MonoBehaviour:
     name: Increase Turret Bullet Frequency
     description: Increases the frequency of your turret's bullets
     depends: BuyTurret
-    thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
+    thumbnail: {fileID: 21300000, guid: e155fd503e228ad4f9f7e307ae0d963f, type: 3}
     shellCost: 0
     jellyCost: 10
     type: 9
@@ -88,7 +88,7 @@ MonoBehaviour:
     name: Increase Turret Bullet Frequency
     description: Increases the frequency of your turret's bullets
     depends: IncreaseTurretBulletFrequency1
-    thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
+    thumbnail: {fileID: 21300000, guid: e155fd503e228ad4f9f7e307ae0d963f, type: 3}
     shellCost: 0
     jellyCost: 20
     type: 9
@@ -100,7 +100,7 @@ MonoBehaviour:
     name: Increase Turret Bullet Frequency
     description: Increases the frequency of your turret's bullets
     depends: IncreaseTurretBulletFrequency2
-    thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
+    thumbnail: {fileID: 21300000, guid: e155fd503e228ad4f9f7e307ae0d963f, type: 3}
     shellCost: 0
     jellyCost: 40
     type: 9
@@ -112,7 +112,7 @@ MonoBehaviour:
     name: Increase Turret Bullet Frequency
     description: Increases the frequency of your turret's bullets
     depends: IncreaseTurretBulletFrequency3
-    thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
+    thumbnail: {fileID: 21300000, guid: e155fd503e228ad4f9f7e307ae0d963f, type: 3}
     shellCost: 0
     jellyCost: 100
     type: 9
@@ -124,7 +124,7 @@ MonoBehaviour:
     name: Increase Turret Bullet Spread
     description: Increases your turret's bullet Spread
     depends: BuyTurret
-    thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
+    thumbnail: {fileID: 21300000, guid: 951206e4366171049bb17bc65be4fc95, type: 3}
     shellCost: 0
     jellyCost: 10
     type: 10
@@ -136,7 +136,7 @@ MonoBehaviour:
     name: Increase Turret Bullet Spread
     description: Increases your turret's bullet Spread
     depends: IncreaseTurretBulletSpread1
-    thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
+    thumbnail: {fileID: 21300000, guid: 951206e4366171049bb17bc65be4fc95, type: 3}
     shellCost: 0
     jellyCost: 30
     type: 10
@@ -148,7 +148,7 @@ MonoBehaviour:
     name: Increase Turret Bullet Spread
     description: Increases your turret's bullet Spread
     depends: IncreaseTurretBulletSpread2
-    thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
+    thumbnail: {fileID: 21300000, guid: 951206e4366171049bb17bc65be4fc95, type: 3}
     shellCost: 0
     jellyCost: 50
     type: 10
@@ -160,7 +160,7 @@ MonoBehaviour:
     name: Increase Turret Bullet Spread
     description: Increases your turret's bullet spread
     depends: IncreaseTurretBulletSpread3
-    thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
+    thumbnail: {fileID: 21300000, guid: 951206e4366171049bb17bc65be4fc95, type: 3}
     shellCost: 0
     jellyCost: 100
     type: 10
@@ -172,7 +172,7 @@ MonoBehaviour:
     name: Increase Turret Bullet Damage
     description: Increases the damege your turret bullets do
     depends: BuyTurret
-    thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
+    thumbnail: {fileID: 21300000, guid: d320dc28a34e7e848a7e44c9b6051917, type: 3}
     shellCost: 0
     jellyCost: 15
     type: 11
@@ -184,7 +184,7 @@ MonoBehaviour:
     name: Increase Turret Bullet Damage
     description: Increases the damege your turret bullets do
     depends: IncreaseTurretBulletDamge1
-    thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
+    thumbnail: {fileID: 21300000, guid: d320dc28a34e7e848a7e44c9b6051917, type: 3}
     shellCost: 0
     jellyCost: 30
     type: 11
@@ -196,7 +196,7 @@ MonoBehaviour:
     name: Increase Turret Bullet Damage
     description: Increases the damege your turret bullets do
     depends: IncreaseTurretBulletDamge2
-    thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
+    thumbnail: {fileID: 21300000, guid: d320dc28a34e7e848a7e44c9b6051917, type: 3}
     shellCost: 0
     jellyCost: 50
     type: 11
@@ -208,7 +208,7 @@ MonoBehaviour:
     name: Increase Turret Bullet Damage
     description: Increases the damege your turret bullets do
     depends: IncreaseTurretBulletDamge3
-    thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
+    thumbnail: {fileID: 21300000, guid: d320dc28a34e7e848a7e44c9b6051917, type: 3}
     shellCost: 0
     jellyCost: 75
     type: 11
@@ -220,7 +220,7 @@ MonoBehaviour:
     name: Increase Turret Bullet Damage
     description: Increases the damege your turret bullets do
     depends: IncreaseTurretBulletDamge4
-    thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
+    thumbnail: {fileID: 21300000, guid: d320dc28a34e7e848a7e44c9b6051917, type: 3}
     shellCost: 0
     jellyCost: 120
     type: 11
@@ -232,7 +232,7 @@ MonoBehaviour:
     name: IncreaseTurret Health
     description: Increases the amount of health yout turret has
     depends: BuyTurret
-    thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
+    thumbnail: {fileID: 21300000, guid: b43edde3c6d48ba4b82d44112a129933, type: 3}
     shellCost: 0
     jellyCost: 15
     type: 12
@@ -244,7 +244,7 @@ MonoBehaviour:
     name: IncreaseTurret Health
     description: Increases the amount of health yout turret has
     depends: IncreaseTurretHealth1
-    thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
+    thumbnail: {fileID: 21300000, guid: b43edde3c6d48ba4b82d44112a129933, type: 3}
     shellCost: 0
     jellyCost: 30
     type: 12
@@ -256,7 +256,7 @@ MonoBehaviour:
     name: IncreaseTurret Health
     description: Increases the amount of health yout turret has
     depends: IncreaseTurretHealth2
-    thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
+    thumbnail: {fileID: 21300000, guid: b43edde3c6d48ba4b82d44112a129933, type: 3}
     shellCost: 0
     jellyCost: 50
     type: 12
@@ -268,7 +268,7 @@ MonoBehaviour:
     name: IncreaseTurret Health
     description: Increases the amount of health yout turret has
     depends: IncreaseTurretHealth3
-    thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
+    thumbnail: {fileID: 21300000, guid: b43edde3c6d48ba4b82d44112a129933, type: 3}
     shellCost: 0
     jellyCost: 60
     type: 12
@@ -280,7 +280,7 @@ MonoBehaviour:
     name: IncreaseTurret Health
     description: Increases the amount of health yout turret has
     depends: IncreaseTurretHealth4
-    thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
+    thumbnail: {fileID: 21300000, guid: b43edde3c6d48ba4b82d44112a129933, type: 3}
     shellCost: 0
     jellyCost: 75
     type: 12
@@ -292,7 +292,7 @@ MonoBehaviour:
     name: IncreaseTurret Health
     description: Increases the amount of health yout turret has
     depends: IncreaseTurretHealth5
-    thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
+    thumbnail: {fileID: 21300000, guid: b43edde3c6d48ba4b82d44112a129933, type: 3}
     shellCost: 0
     jellyCost: 100
     type: 12
@@ -304,7 +304,7 @@ MonoBehaviour:
     name: IncreaseTurret Health
     description: Increases the amount of health yout turret has
     depends: IncreaseTurretHealth6
-    thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
+    thumbnail: {fileID: 21300000, guid: b43edde3c6d48ba4b82d44112a129933, type: 3}
     shellCost: 0
     jellyCost: 200
     type: 12
@@ -316,7 +316,7 @@ MonoBehaviour:
     name: Refil Turret Health
     description: Refils your turret's health
     depends: BuyTurret
-    thumbnail: {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
+    thumbnail: {fileID: 21300000, guid: e29f5a341f417a04e814c13d2bc29d78, type: 3}
     shellCost: 0
     jellyCost: 30
     type: 13
