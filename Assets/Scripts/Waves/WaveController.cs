@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class WaveController : MonoBehaviour {
 
 	int wave = 0;
-	int timeBetweenWaves = 10;
+	int timeBetweenWaves = 20;
 	int enemiesToSpawn = 5;
 	float enemyHealth = 3f;
 	float enemyBullets = 1f;

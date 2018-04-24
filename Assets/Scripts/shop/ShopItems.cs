@@ -22,6 +22,9 @@ public enum ItemType {
     ChangeTurretBulletDamage,
     ChangeTurretHealth,
     RefillTurretHealth,
+
+	OpenDoor,
+	FixShip,
     
 }
 [System.Serializable]
@@ -33,6 +36,7 @@ public struct ShopItem {
     public Sprite thumbnail;
     public int shellCost;
     public int jellyCost;
+	public int partsCost;
     public ItemType type;
     public bool consumable;
     [SerializeField]

@@ -20,6 +20,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
     shellCost: 50
     jellyCost: 0
+    partsCost: 0
     type: 0
     consumable: 1
     functionValues: []
@@ -30,6 +31,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: 0531a2c903a8a4e4186963b1e843f578, type: 3}
     shellCost: 30
     jellyCost: 0
+    partsCost: 0
     type: 2
     consumable: 1
     functionValues:
@@ -42,6 +44,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: 0531a2c903a8a4e4186963b1e843f578, type: 3}
     shellCost: 40
     jellyCost: 0
+    partsCost: 0
     type: 2
     consumable: 1
     functionValues:
@@ -54,6 +57,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: 0531a2c903a8a4e4186963b1e843f578, type: 3}
     shellCost: 100
     jellyCost: 0
+    partsCost: 0
     type: 2
     consumable: 1
     functionValues:
@@ -66,6 +70,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: 0531a2c903a8a4e4186963b1e843f578, type: 3}
     shellCost: 300
     jellyCost: 0
+    partsCost: 0
     type: 2
     consumable: 1
     functionValues:
@@ -78,6 +83,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: 0531a2c903a8a4e4186963b1e843f578, type: 3}
     shellCost: 500
     jellyCost: 0
+    partsCost: 0
     type: 2
     consumable: 1
     functionValues:
@@ -90,6 +96,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: 0531a2c903a8a4e4186963b1e843f578, type: 3}
     shellCost: 1000
     jellyCost: 0
+    partsCost: 0
     type: 2
     consumable: 1
     functionValues:
@@ -102,6 +109,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: 0531a2c903a8a4e4186963b1e843f578, type: 3}
     shellCost: 2500
     jellyCost: 0
+    partsCost: 0
     type: 2
     consumable: 1
     functionValues:
@@ -114,6 +122,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: 0531a2c903a8a4e4186963b1e843f578, type: 3}
     shellCost: 10000
     jellyCost: 0
+    partsCost: 0
     type: 2
     consumable: 1
     functionValues:
@@ -126,6 +135,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: 0531a2c903a8a4e4186963b1e843f578, type: 3}
     shellCost: 50000
     jellyCost: 0
+    partsCost: 0
     type: 2
     consumable: 1
     functionValues:
@@ -138,6 +148,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: 0531a2c903a8a4e4186963b1e843f578, type: 3}
     shellCost: 1000000
     jellyCost: 0
+    partsCost: 0
     type: 2
     consumable: 1
     functionValues:
@@ -145,11 +156,12 @@ MonoBehaviour:
       value: 1000
   - id: BulletSpread1
     name: Bullet Spread
-    description: Increases the plays bullet spread
+    description: Decreases bullet spread
     depends: 
     thumbnail: {fileID: 21300000, guid: 7af6735e1751acc47a39a0b352d8516f, type: 3}
     shellCost: 100
     jellyCost: 0
+    partsCost: 0
     type: 3
     consumable: 0
     functionValues:
@@ -157,11 +169,12 @@ MonoBehaviour:
       value: 0.25
   - id: BulletSpread2
     name: Bullet Spread
-    description: Increases the plays bullet spread
+    description: Decreases bullet spread
     depends: 
     thumbnail: {fileID: 21300000, guid: 7af6735e1751acc47a39a0b352d8516f, type: 3}
     shellCost: 300
     jellyCost: 0
+    partsCost: 0
     type: 3
     consumable: 0
     functionValues:
@@ -169,11 +182,12 @@ MonoBehaviour:
       value: 0.25
   - id: BulletSpread3
     name: Bullet Spread
-    description: Increases the plays bullet spread
+    description: Decreases bullet spread
     depends: 
     thumbnail: {fileID: 21300000, guid: 7af6735e1751acc47a39a0b352d8516f, type: 3}
     shellCost: 500
     jellyCost: 0
+    partsCost: 0
     type: 3
     consumable: 0
     functionValues:
@@ -181,11 +195,12 @@ MonoBehaviour:
       value: 0.25
   - id: BulletSpread4
     name: Bullet Spread
-    description: Increases the plays bullet spread
+    description: Decreases bullet spread
     depends: 
     thumbnail: {fileID: 21300000, guid: 7af6735e1751acc47a39a0b352d8516f, type: 3}
     shellCost: 10000
     jellyCost: 0
+    partsCost: 0
     type: 3
     consumable: 0
     functionValues:
@@ -198,6 +213,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: fbb7e8a07440d954c83e4863b0e60480, type: 3}
     shellCost: 25
     jellyCost: 0
+    partsCost: 0
     type: 4
     consumable: 1
     functionValues:
@@ -206,10 +222,11 @@ MonoBehaviour:
   - id: BulletDamage2
     name: Bullet Damage
     description: Increases the players bullet damage
-    depends: BulletDamge1
+    depends: BulletDamage1
     thumbnail: {fileID: 21300000, guid: fbb7e8a07440d954c83e4863b0e60480, type: 3}
     shellCost: 100
     jellyCost: 0
+    partsCost: 0
     type: 4
     consumable: 1
     functionValues:
@@ -222,6 +239,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: fbb7e8a07440d954c83e4863b0e60480, type: 3}
     shellCost: 200
     jellyCost: 0
+    partsCost: 0
     type: 4
     consumable: 1
     functionValues:
@@ -234,6 +252,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: fbb7e8a07440d954c83e4863b0e60480, type: 3}
     shellCost: 200
     jellyCost: 0
+    partsCost: 0
     type: 4
     consumable: 1
     functionValues:
@@ -246,6 +265,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: fbb7e8a07440d954c83e4863b0e60480, type: 3}
     shellCost: 500
     jellyCost: 0
+    partsCost: 0
     type: 4
     consumable: 1
     functionValues:
@@ -258,6 +278,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: fbb7e8a07440d954c83e4863b0e60480, type: 3}
     shellCost: 1000
     jellyCost: 0
+    partsCost: 0
     type: 4
     consumable: 1
     functionValues:
@@ -270,6 +291,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: fbb7e8a07440d954c83e4863b0e60480, type: 3}
     shellCost: 2000
     jellyCost: 0
+    partsCost: 0
     type: 4
     consumable: 1
     functionValues:
@@ -282,6 +304,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: fbb7e8a07440d954c83e4863b0e60480, type: 3}
     shellCost: 4000
     jellyCost: 0
+    partsCost: 0
     type: 4
     consumable: 1
     functionValues:
@@ -294,6 +317,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
     shellCost: 8000
     jellyCost: 0
+    partsCost: 0
     type: 4
     consumable: 1
     functionValues:
@@ -306,6 +330,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: fbb7e8a07440d954c83e4863b0e60480, type: 3}
     shellCost: 16000
     jellyCost: 0
+    partsCost: 0
     type: 4
     consumable: 1
     functionValues:
@@ -318,6 +343,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: fbb7e8a07440d954c83e4863b0e60480, type: 3}
     shellCost: 32000
     jellyCost: 0
+    partsCost: 0
     type: 4
     consumable: 1
     functionValues:
@@ -330,6 +356,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: 1f17caabfa78a0c44be79f6e4a7f9e48, type: 3}
     shellCost: 100
     jellyCost: 0
+    partsCost: 0
     type: 5
     consumable: 1
     functionValues:
@@ -342,6 +369,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: 1f17caabfa78a0c44be79f6e4a7f9e48, type: 3}
     shellCost: 150
     jellyCost: 0
+    partsCost: 0
     type: 5
     consumable: 1
     functionValues:
@@ -354,6 +382,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: 1f17caabfa78a0c44be79f6e4a7f9e48, type: 3}
     shellCost: 200
     jellyCost: 0
+    partsCost: 0
     type: 5
     consumable: 1
     functionValues:
@@ -366,6 +395,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: 1f17caabfa78a0c44be79f6e4a7f9e48, type: 3}
     shellCost: 300
     jellyCost: 0
+    partsCost: 0
     type: 5
     consumable: 1
     functionValues:
@@ -378,6 +408,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: 1f17caabfa78a0c44be79f6e4a7f9e48, type: 3}
     shellCost: 500
     jellyCost: 0
+    partsCost: 0
     type: 5
     consumable: 1
     functionValues:
@@ -390,6 +421,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
     shellCost: 800
     jellyCost: 0
+    partsCost: 0
     type: 5
     consumable: 1
     functionValues:
@@ -402,6 +434,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: 1f17caabfa78a0c44be79f6e4a7f9e48, type: 3}
     shellCost: 1200
     jellyCost: 0
+    partsCost: 0
     type: 5
     consumable: 1
     functionValues:
@@ -414,6 +447,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: 1f17caabfa78a0c44be79f6e4a7f9e48, type: 3}
     shellCost: 2000
     jellyCost: 0
+    partsCost: 0
     type: 5
     consumable: 1
     functionValues:
@@ -426,6 +460,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: 1f17caabfa78a0c44be79f6e4a7f9e48, type: 3}
     shellCost: 3000
     jellyCost: 0
+    partsCost: 0
     type: 5
     consumable: 1
     functionValues:
@@ -438,6 +473,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: 1f17caabfa78a0c44be79f6e4a7f9e48, type: 3}
     shellCost: 8000
     jellyCost: 0
+    partsCost: 0
     type: 5
     consumable: 1
     functionValues:
@@ -450,6 +486,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: 1f17caabfa78a0c44be79f6e4a7f9e48, type: 3}
     shellCost: 12000
     jellyCost: 0
+    partsCost: 0
     type: 5
     consumable: 1
     functionValues:
@@ -462,6 +499,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: 1f17caabfa78a0c44be79f6e4a7f9e48, type: 3}
     shellCost: 20000
     jellyCost: 0
+    partsCost: 0
     type: 5
     consumable: 1
     functionValues:
@@ -474,6 +512,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: 1f17caabfa78a0c44be79f6e4a7f9e48, type: 3}
     shellCost: 40000
     jellyCost: 0
+    partsCost: 0
     type: 5
     consumable: 1
     functionValues:
@@ -486,6 +525,7 @@ MonoBehaviour:
     thumbnail: {fileID: 21300000, guid: 1f17caabfa78a0c44be79f6e4a7f9e48, type: 3}
     shellCost: 1000000
     jellyCost: 0
+    partsCost: 0
     type: 5
     consumable: 1
     functionValues:
@@ -493,11 +533,12 @@ MonoBehaviour:
       value: 1500
   - id: RefilHealth1
     name: Refil Health
-    description: Refils players health
+    description: Refils players health by 5
     depends: 
     thumbnail: {fileID: 21300000, guid: e29f5a341f417a04e814c13d2bc29d78, type: 3}
     shellCost: 50
     jellyCost: 0
+    partsCost: 0
     type: 6
     consumable: 0
     functionValues:
@@ -505,11 +546,12 @@ MonoBehaviour:
       value: 5
   - id: RefilHealth2
     name: Refil Health
-    description: Refils players health
+    description: Refils players health by 10
     depends: 
     thumbnail: {fileID: 21300000, guid: e29f5a341f417a04e814c13d2bc29d78, type: 3}
     shellCost: 80
     jellyCost: 0
+    partsCost: 0
     type: 6
     consumable: 0
     functionValues:
@@ -517,13 +559,79 @@ MonoBehaviour:
       value: 10
   - id: RefilHealth3
     name: Refil Health
-    description: Refils players health
+    description: Refils players health by 50
     depends: 
     thumbnail: {fileID: 21300000, guid: e29f5a341f417a04e814c13d2bc29d78, type: 3}
     shellCost: 300
     jellyCost: 0
+    partsCost: 0
     type: 6
     consumable: 0
+    functionValues:
+    - key: value
+      value: 50
+  - id: OpenDoor1
+    name: Open Door
+    description: Open a door
+    depends: 
+    thumbnail: {fileID: 21300000, guid: c5e25248612960549b6321b6e9efaba2, type: 3}
+    shellCost: 500
+    jellyCost: 0
+    partsCost: 0
+    type: 14
+    consumable: 1
+    functionValues:
+    - key: value
+      value: 50
+  - id: OpenDoor2
+    name: Open Door
+    description: Open another door
+    depends: OpenDoor1
+    thumbnail: {fileID: 21300000, guid: c5e25248612960549b6321b6e9efaba2, type: 3}
+    shellCost: 5000
+    jellyCost: 0
+    partsCost: 0
+    type: 14
+    consumable: 1
+    functionValues:
+    - key: value
+      value: 50
+  - id: OpenDoor3
+    name: Open Door
+    description: Open a door
+    depends: OpenDoor2
+    thumbnail: {fileID: 21300000, guid: c5e25248612960549b6321b6e9efaba2, type: 3}
+    shellCost: 0
+    jellyCost: 100
+    partsCost: 0
+    type: 14
+    consumable: 1
+    functionValues:
+    - key: value
+      value: 50
+  - id: OpenDoor4
+    name: Open Door
+    description: Open the last door
+    depends: OpenDoor3
+    thumbnail: {fileID: 21300000, guid: c5e25248612960549b6321b6e9efaba2, type: 3}
+    shellCost: 0
+    jellyCost: 500
+    partsCost: 0
+    type: 14
+    consumable: 1
+    functionValues:
+    - key: value
+      value: 50
+  - id: FixShip
+    name: Fix Ship
+    description: Fix Your Ship (requires the 4 ship pieces)
+    depends: 
+    thumbnail: {fileID: 21300000, guid: 519ff54700fb92e43b3bae1cd373c2c3, type: 3}
+    shellCost: 100000
+    jellyCost: 1000
+    partsCost: 4
+    type: 15
+    consumable: 1
     functionValues:
     - key: value
       value: 50

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class Shop : MonoBehaviour {
 
     Transform canvasContainer;
@@ -11,6 +12,9 @@ public class Shop : MonoBehaviour {
     Coroutine showShop, hideShop;
     bool inShopRadius = false;
     bool shopOpen = false;
+	public GameObject[] doors;
+	public GameObject[] extraSpawns;
+	int curDoor = 0;
 
     public ShopItems items;
 
@@ -39,6 +43,7 @@ public class Shop : MonoBehaviour {
             EnableButtonOnScore ebos = shopItemUI.AddComponent<EnableButtonOnScore>();
             ebos.requiredShells = item.shellCost;
             ebos.requiredJelly = item.jellyCost;
+			ebos.requiredParts = item.partsCost;
             ebos.depends = item.depends;
 
             string costString = "";
@@ -48,6 +53,9 @@ public class Shop : MonoBehaviour {
             if(item.jellyCost > 0){
                 costString += item.jellyCost+" Jelly";
             }
+			if(item.partsCost > 0){
+				costString += item.partsCost+" Ship Parts";
+			}
 
             Transform siTransform = child.transform;
             siTransform.Find("Image").GetComponent<Image>().sprite = item.thumbnail;
@@ -78,6 +86,11 @@ public class Shop : MonoBehaviour {
                 StartShowShop();
             }
         }
+		if (inShopRadius && Input.GetButtonDown ("Cancel")) {
+			if (shopOpen) {
+				StopShowShop ();
+			}
+		}
     }
 
     void OnTriggerEnter(Collider collider) {
@@ -178,7 +191,7 @@ public class Shop : MonoBehaviour {
                     if (parameters.ContainsKey("percent")) {
                         string p = parameters["percent"];
                         float val = float.Parse(p);
-                        ps.spread *= val;
+					ps.spread -= ps.spread*val;
                     }
                     if (parameters.ContainsKey("value")) {
                         string p = parameters["value"];
@@ -268,7 +281,7 @@ public class Shop : MonoBehaviour {
                     if (parameters.ContainsKey("percent")) {
                         string p = parameters["percent"];
                         float val = float.Parse(p);
-                        tai.spread *= val;
+					tai.spread -= tai.spread*val;
                     }
                     if (parameters.ContainsKey("value")) {
                         string p = parameters["value"];
@@ -322,6 +335,16 @@ public class Shop : MonoBehaviour {
                     }
                     break;
                 }
+			case ItemType.OpenDoor:{
+				Destroy (doors [curDoor]);
+				extraSpawns [curDoor].SetActive (true);
+				curDoor++;
+				break;
+			}
+			case ItemType.FixShip:{
+				SceneManager.LoadScene ("Ending");
+				break;
+			}
             default: {
                     break;
                 }
