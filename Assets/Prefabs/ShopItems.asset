@@ -17,7 +17,7 @@ MonoBehaviour:
     name: Auto Fire
     description: Constantly fires when you hold the fire button
     depends: 
-    thumbnail: {fileID: 21300000, guid: 5485e2f56028a3c4cb54f5caa167377e, type: 3}
+    thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
     shellCost: 50
     jellyCost: 0
     type: 0
@@ -27,7 +27,7 @@ MonoBehaviour:
     name: Increase Bullet Frequency
     description: Increases the frequency in which bullets are fired by the player
     depends: AutoFire
-    thumbnail: {fileID: 21300000, guid: 0626b924325d1c34cafa6b22297f4e4f, type: 3}
+    thumbnail: {fileID: 21300000, guid: 0531a2c903a8a4e4186963b1e843f578, type: 3}
     shellCost: 30
     jellyCost: 0
     type: 2
@@ -39,7 +39,7 @@ MonoBehaviour:
     name: Increase Bullet Frequency
     description: Increases the frequency in which bullets are fired by the player
     depends: BulletFrequency1
-    thumbnail: {fileID: 21300000, guid: 0626b924325d1c34cafa6b22297f4e4f, type: 3}
+    thumbnail: {fileID: 21300000, guid: 0531a2c903a8a4e4186963b1e843f578, type: 3}
     shellCost: 40
     jellyCost: 0
     type: 2
@@ -51,7 +51,7 @@ MonoBehaviour:
     name: Increase Bullet Frequency
     description: Increases the frequency in which bullets are fired by the player
     depends: BulletFrequency2
-    thumbnail: {fileID: 21300000, guid: 0626b924325d1c34cafa6b22297f4e4f, type: 3}
+    thumbnail: {fileID: 21300000, guid: 0531a2c903a8a4e4186963b1e843f578, type: 3}
     shellCost: 100
     jellyCost: 0
     type: 2
@@ -63,7 +63,7 @@ MonoBehaviour:
     name: Increase Bullet Frequency
     description: Increases the frequency in which bullets are fired by the player
     depends: BulletFrequency3
-    thumbnail: {fileID: 21300000, guid: 0626b924325d1c34cafa6b22297f4e4f, type: 3}
+    thumbnail: {fileID: 21300000, guid: 0531a2c903a8a4e4186963b1e843f578, type: 3}
     shellCost: 300
     jellyCost: 0
     type: 2
@@ -75,7 +75,7 @@ MonoBehaviour:
     name: Increase Bullet Frequency
     description: Increases the frequency in which bullets are fired by the player
     depends: BulletFrequency4
-    thumbnail: {fileID: 21300000, guid: 0626b924325d1c34cafa6b22297f4e4f, type: 3}
+    thumbnail: {fileID: 21300000, guid: 0531a2c903a8a4e4186963b1e843f578, type: 3}
     shellCost: 500
     jellyCost: 0
     type: 2
@@ -87,7 +87,7 @@ MonoBehaviour:
     name: Increase Bullet Frequency
     description: Increases the frequency in which bullets are fired by the player
     depends: BulletFrequency5
-    thumbnail: {fileID: 21300000, guid: 0626b924325d1c34cafa6b22297f4e4f, type: 3}
+    thumbnail: {fileID: 21300000, guid: 0531a2c903a8a4e4186963b1e843f578, type: 3}
     shellCost: 1000
     jellyCost: 0
     type: 2
@@ -99,7 +99,7 @@ MonoBehaviour:
     name: Increase Bullet Frequency
     description: Increases the frequency in which bullets are fired by the player
     depends: BulletFrewquency6
-    thumbnail: {fileID: 21300000, guid: 0626b924325d1c34cafa6b22297f4e4f, type: 3}
+    thumbnail: {fileID: 21300000, guid: 0531a2c903a8a4e4186963b1e843f578, type: 3}
     shellCost: 2500
     jellyCost: 0
     type: 2
@@ -111,7 +111,7 @@ MonoBehaviour:
     name: Increase Bullet Frequency
     description: Increases the frequency in which bullets are fired by the player
     depends: BulletFrequency7
-    thumbnail: {fileID: 21300000, guid: 0626b924325d1c34cafa6b22297f4e4f, type: 3}
+    thumbnail: {fileID: 21300000, guid: 0531a2c903a8a4e4186963b1e843f578, type: 3}
     shellCost: 10000
     jellyCost: 0
     type: 2
@@ -123,7 +123,7 @@ MonoBehaviour:
     name: Increase Bullet Frequency
     description: Increases the frequency in which bullets are fired by the player
     depends: BulletFrequency8
-    thumbnail: {fileID: 21300000, guid: 0626b924325d1c34cafa6b22297f4e4f, type: 3}
+    thumbnail: {fileID: 21300000, guid: 0531a2c903a8a4e4186963b1e843f578, type: 3}
     shellCost: 50000
     jellyCost: 0
     type: 2
@@ -135,7 +135,7 @@ MonoBehaviour:
     name: Increase Bullet Frequency
     description: Increases the frequency in which bullets are fired by the player
     depends: BulletFrequency9
-    thumbnail: {fileID: 21300000, guid: 0626b924325d1c34cafa6b22297f4e4f, type: 3}
+    thumbnail: {fileID: 21300000, guid: 0531a2c903a8a4e4186963b1e843f578, type: 3}
     shellCost: 1000000
     jellyCost: 0
     type: 2
@@ -147,7 +147,7 @@ MonoBehaviour:
     name: Bullet Spread
     description: Increases the plays bullet spread
     depends: 
-    thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
+    thumbnail: {fileID: 21300000, guid: 7af6735e1751acc47a39a0b352d8516f, type: 3}
     shellCost: 100
     jellyCost: 0
     type: 3
@@ -159,7 +159,7 @@ MonoBehaviour:
     name: Bullet Spread
     description: Increases the plays bullet spread
     depends: 
-    thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
+    thumbnail: {fileID: 21300000, guid: 7af6735e1751acc47a39a0b352d8516f, type: 3}
     shellCost: 300
     jellyCost: 0
     type: 3
@@ -171,7 +171,7 @@ MonoBehaviour:
     name: Bullet Spread
     description: Increases the plays bullet spread
     depends: 
-    thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
+    thumbnail: {fileID: 21300000, guid: 7af6735e1751acc47a39a0b352d8516f, type: 3}
     shellCost: 500
     jellyCost: 0
     type: 3
@@ -183,7 +183,7 @@ MonoBehaviour:
     name: Bullet Spread
     description: Increases the plays bullet spread
     depends: 
-    thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
+    thumbnail: {fileID: 21300000, guid: 7af6735e1751acc47a39a0b352d8516f, type: 3}
     shellCost: 10000
     jellyCost: 0
     type: 3
@@ -195,7 +195,7 @@ MonoBehaviour:
     name: Bullet Damage
     description: Increases the players bullet damage
     depends: 
-    thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
+    thumbnail: {fileID: 21300000, guid: fbb7e8a07440d954c83e4863b0e60480, type: 3}
     shellCost: 25
     jellyCost: 0
     type: 4
@@ -207,7 +207,7 @@ MonoBehaviour:
     name: Bullet Damage
     description: Increases the players bullet damage
     depends: BulletDamge1
-    thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
+    thumbnail: {fileID: 21300000, guid: fbb7e8a07440d954c83e4863b0e60480, type: 3}
     shellCost: 100
     jellyCost: 0
     type: 4
@@ -219,7 +219,7 @@ MonoBehaviour:
     name: Bullet Damage
     description: Increases the players bullet damage
     depends: BulletDamage2
-    thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
+    thumbnail: {fileID: 21300000, guid: fbb7e8a07440d954c83e4863b0e60480, type: 3}
     shellCost: 200
     jellyCost: 0
     type: 4
@@ -231,7 +231,7 @@ MonoBehaviour:
     name: Bullet Damage
     description: Increases the players bullet damage
     depends: BulletDamage3
-    thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
+    thumbnail: {fileID: 21300000, guid: fbb7e8a07440d954c83e4863b0e60480, type: 3}
     shellCost: 200
     jellyCost: 0
     type: 4
@@ -243,7 +243,7 @@ MonoBehaviour:
     name: Bullet Damage
     description: Increases the players bullet damage
     depends: BulletDamage4
-    thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
+    thumbnail: {fileID: 21300000, guid: fbb7e8a07440d954c83e4863b0e60480, type: 3}
     shellCost: 500
     jellyCost: 0
     type: 4
@@ -255,7 +255,7 @@ MonoBehaviour:
     name: Bullet Damage
     description: Increases the players bullet damage
     depends: BulletDamage5
-    thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
+    thumbnail: {fileID: 21300000, guid: fbb7e8a07440d954c83e4863b0e60480, type: 3}
     shellCost: 1000
     jellyCost: 0
     type: 4
@@ -267,7 +267,7 @@ MonoBehaviour:
     name: Bullet Damage
     description: Increases the players bullet damage
     depends: BulletDamage6
-    thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
+    thumbnail: {fileID: 21300000, guid: fbb7e8a07440d954c83e4863b0e60480, type: 3}
     shellCost: 2000
     jellyCost: 0
     type: 4
@@ -279,7 +279,7 @@ MonoBehaviour:
     name: Bullet Damage
     description: Increases the players bullet damage
     depends: BulletDamage7
-    thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
+    thumbnail: {fileID: 21300000, guid: fbb7e8a07440d954c83e4863b0e60480, type: 3}
     shellCost: 4000
     jellyCost: 0
     type: 4
@@ -303,7 +303,7 @@ MonoBehaviour:
     name: Bullet Damage
     description: Increases the players bullet damage
     depends: BulletDamage9
-    thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
+    thumbnail: {fileID: 21300000, guid: fbb7e8a07440d954c83e4863b0e60480, type: 3}
     shellCost: 16000
     jellyCost: 0
     type: 4
@@ -315,7 +315,7 @@ MonoBehaviour:
     name: Bullet Damage
     description: Increases the players bullet damage
     depends: BulletDamage10
-    thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
+    thumbnail: {fileID: 21300000, guid: fbb7e8a07440d954c83e4863b0e60480, type: 3}
     shellCost: 32000
     jellyCost: 0
     type: 4
@@ -327,7 +327,7 @@ MonoBehaviour:
     name: Increase Health
     description: Increase player health.
     depends: 
-    thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
+    thumbnail: {fileID: 21300000, guid: 1f17caabfa78a0c44be79f6e4a7f9e48, type: 3}
     shellCost: 100
     jellyCost: 0
     type: 5
@@ -339,7 +339,7 @@ MonoBehaviour:
     name: Increase Health
     description: Increase player health.
     depends: IncreaseHealth1
-    thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
+    thumbnail: {fileID: 21300000, guid: 1f17caabfa78a0c44be79f6e4a7f9e48, type: 3}
     shellCost: 150
     jellyCost: 0
     type: 5
@@ -351,7 +351,7 @@ MonoBehaviour:
     name: Increase Health
     description: Increase player health.
     depends: IncreaseHealth2
-    thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
+    thumbnail: {fileID: 21300000, guid: 1f17caabfa78a0c44be79f6e4a7f9e48, type: 3}
     shellCost: 200
     jellyCost: 0
     type: 5
@@ -363,7 +363,7 @@ MonoBehaviour:
     name: Increase Health
     description: Increase player health.
     depends: IncreaseHealth3
-    thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
+    thumbnail: {fileID: 21300000, guid: 1f17caabfa78a0c44be79f6e4a7f9e48, type: 3}
     shellCost: 300
     jellyCost: 0
     type: 5
@@ -375,7 +375,7 @@ MonoBehaviour:
     name: Increase Health
     description: Increase player health.
     depends: IncreaseHealth4
-    thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
+    thumbnail: {fileID: 21300000, guid: 1f17caabfa78a0c44be79f6e4a7f9e48, type: 3}
     shellCost: 500
     jellyCost: 0
     type: 5
@@ -399,7 +399,7 @@ MonoBehaviour:
     name: Increase Health
     description: Increase player health.
     depends: IncreaseHealth6
-    thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
+    thumbnail: {fileID: 21300000, guid: 1f17caabfa78a0c44be79f6e4a7f9e48, type: 3}
     shellCost: 1200
     jellyCost: 0
     type: 5
@@ -411,7 +411,7 @@ MonoBehaviour:
     name: Increase Health
     description: Increase player health.
     depends: IncreaseHealth7
-    thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
+    thumbnail: {fileID: 21300000, guid: 1f17caabfa78a0c44be79f6e4a7f9e48, type: 3}
     shellCost: 2000
     jellyCost: 0
     type: 5
@@ -423,7 +423,7 @@ MonoBehaviour:
     name: Increase Health
     description: Increase player health.
     depends: IncreaseHealth8
-    thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
+    thumbnail: {fileID: 21300000, guid: 1f17caabfa78a0c44be79f6e4a7f9e48, type: 3}
     shellCost: 3000
     jellyCost: 0
     type: 5
@@ -435,7 +435,7 @@ MonoBehaviour:
     name: Increase Health
     description: Increase player health.
     depends: IncreaseHealth9
-    thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
+    thumbnail: {fileID: 21300000, guid: 1f17caabfa78a0c44be79f6e4a7f9e48, type: 3}
     shellCost: 8000
     jellyCost: 0
     type: 5
@@ -447,7 +447,7 @@ MonoBehaviour:
     name: Increase Health
     description: Increase player health.
     depends: IncreaseHealth10
-    thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
+    thumbnail: {fileID: 21300000, guid: 1f17caabfa78a0c44be79f6e4a7f9e48, type: 3}
     shellCost: 12000
     jellyCost: 0
     type: 5
@@ -459,7 +459,7 @@ MonoBehaviour:
     name: Increase Health
     description: Increase player health.
     depends: IncreaseHealth11
-    thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
+    thumbnail: {fileID: 21300000, guid: 1f17caabfa78a0c44be79f6e4a7f9e48, type: 3}
     shellCost: 20000
     jellyCost: 0
     type: 5
@@ -471,7 +471,7 @@ MonoBehaviour:
     name: Increase Health
     description: Increase player health.
     depends: IncreaseHealth12
-    thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
+    thumbnail: {fileID: 21300000, guid: 1f17caabfa78a0c44be79f6e4a7f9e48, type: 3}
     shellCost: 40000
     jellyCost: 0
     type: 5
@@ -483,7 +483,7 @@ MonoBehaviour:
     name: Increase Health
     description: Increase player health.
     depends: IncreaseHealth13
-    thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
+    thumbnail: {fileID: 21300000, guid: 1f17caabfa78a0c44be79f6e4a7f9e48, type: 3}
     shellCost: 1000000
     jellyCost: 0
     type: 5
@@ -495,7 +495,7 @@ MonoBehaviour:
     name: Refil Health
     description: Refils players health
     depends: 
-    thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
+    thumbnail: {fileID: 21300000, guid: e29f5a341f417a04e814c13d2bc29d78, type: 3}
     shellCost: 50
     jellyCost: 0
     type: 6
@@ -507,7 +507,7 @@ MonoBehaviour:
     name: Refil Health
     description: Refils players health
     depends: 
-    thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
+    thumbnail: {fileID: 21300000, guid: e29f5a341f417a04e814c13d2bc29d78, type: 3}
     shellCost: 80
     jellyCost: 0
     type: 6
@@ -519,7 +519,7 @@ MonoBehaviour:
     name: Refil Health
     description: Refils players health
     depends: 
-    thumbnail: {fileID: 21300000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
+    thumbnail: {fileID: 21300000, guid: e29f5a341f417a04e814c13d2bc29d78, type: 3}
     shellCost: 300
     jellyCost: 0
     type: 6
